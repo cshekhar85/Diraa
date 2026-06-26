@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diraa Capital | Quant-Oriented Market Research Frameworks</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     
     <script>
@@ -143,7 +140,6 @@
 </head>
 <body class="font-sans text-slate-700 bg-white antialiased selection:bg-primary-500 selection:text-white transition-all duration-150">
 
-    <!-- FLOATING LANGUAGE CONVERTER (LEFT) -->
     <div class="fixed bottom-6 left-6 z-50 flex flex-col items-start gap-2 font-sans select-none">
         <div id="language-menu" class="hidden bg-white/95 border border-slate-200 shadow-xl rounded-xl p-2 mb-1 flex flex-col gap-1 min-w-[140px] backdrop-blur-md">
             <button onclick="changeLanguage('en')" class="text-left px-3 py-1.5 text-xs font-bold text-slate-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors flex items-center justify-between"><span>English</span><span class="text-[10px] opacity-40">EN</span></button>
@@ -157,7 +153,6 @@
         </button>
     </div>
 
-    <!-- FLOATING ACCESSIBILITY SUITE (RIGHT) -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2 font-sans select-none">
         <div id="accessibility-menu" class="hidden bg-white/95 border border-slate-200 shadow-xl rounded-xl p-3 mb-1 flex flex-col gap-2.5 min-w-[180px] backdrop-blur-md">
             <div class="text-[10px] font-black uppercase tracking-wider text-slate-400 border-b border-slate-100 pb-1">Accessibility Options</div>
@@ -177,7 +172,6 @@
         </button>
     </div>
 
-    <!-- NAVIGATION -->
     <nav class="fixed w-full z-50 glass-nav border-b border-slate-100 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
@@ -212,7 +206,6 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <section class="relative pt-24 pb-12 md:pt-28 md:pb-16 overflow-hidden dot-grid bg-white border-b border-slate-100 flex items-center">
         <div class="absolute inset-0 max-w-7xl mx-auto left-0 right-0 w-full h-full pointer-events-none hidden lg:block z-0">
             <div class="w-full h-full hero-bg-card"></div>
@@ -255,7 +248,6 @@
         </div>
     </section>
 
-    <!-- ABOUT SECTION & 5 PILLARS -->
     <section id="about" class="py-20 bg-slate-50 border-t border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -291,7 +283,6 @@
         </div>
     </section>
 
-    <!-- RESEARCH FRAMEWORKS -->
     <section id="frameworks" class="py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -347,7 +338,6 @@
         </div>
     </section>
 
-    <!-- PROCESS / SMARTPHONE SIMULATOR SECTION -->
     <section id="process" class="py-24 bg-slate-50 border-t border-b border-slate-100 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -357,7 +347,6 @@
             </div>
 
             <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <!-- Left column description steps -->
                 <div class="lg:col-span-6 space-y-4">
                     <div id="step-ctrl-1" onclick="switchProcessStep(1)" class="cursor-pointer group p-6 rounded-2xl border-2 border-primary-500 bg-white shadow-md shadow-primary-500/5 transition-all duration-300 transform hover:-translate-y-0.5">
                         <div class="flex items-start gap-4">
@@ -390,7 +379,6 @@
                     </div>
                 </div>
 
-                <!-- Right column mockup simulator -->
                 <div class="lg:col-span-6 flex justify-center relative">
                     <div class="absolute w-72 h-72 bg-primary-100 rounded-full blur-3xl opacity-60 -z-10 -top-6"></div>
                     <div class="w-[320px] h-[610px] bg-slate-900 rounded-[40px] p-3.5 shadow-2xl border-4 border-slate-800 relative">
@@ -406,24 +394,20 @@
                             
                             <div class="flex-1 overflow-y-auto relative py-1 space-y-2.5 scrollbar-none" style="-ms-overflow-style: none; scrollbar-width: none;">
                                 
-                                <!-- PHASE 0: INITIAL OPEN ACTION GATE -->
                                 <div id="screen-content-0" class="transition-all duration-300 flex flex-col items-center justify-center h-full space-y-5 py-12 text-center">
                                     <div class="w-24 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm border border-slate-100 animate-bounce p-2">
-                                        <!-- Clean localized asset target alignment -->
-                                        <img src="smallcase.jpg" alt="smallcase Logo" class="w-full h-auto max-h-12 object-contain" />
+                                        <img src="smallcase.png" alt="smallcase Logo" class="w-full h-auto max-h-12 object-contain" />
                                     </div>
                                     <div class="px-2">
                                         <h4 class="text-xs font-black text-slate-900 tracking-tight">Diraa Capital Research Baskets</h4>
                                         <p class="text-[9px] text-slate-400 max-w-[210px] mx-auto mt-1">Deploy automated models directly via secure ecosystem protocols.</p>
                                     </div>
-                                    <!-- Customized brand combo layout styling -->
                                     <button onclick="launchMockApp()" class="w-full max-w-[230px] bg-smallcase-500 hover:bg-smallcase-600 text-white font-extrabold text-[11px] py-3 px-4 rounded-xl shadow-lg shadow-smallcase-500/20 transition-all flex items-center justify-center gap-2 mt-2 group">
                                         <span>Open smallcase App</span>
                                         <i data-lucide="arrow-right" class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform"></i>
                                     </button>
                                 </div>
 
-                                <!-- PHASE 1: STRATEGY SUBSCRIPTION CHOOSER -->
                                 <div id="screen-content-1" class="hidden transition-all duration-300 space-y-2.5">
                                     <div class="text-center">
                                         <span class="text-[9px] bg-primary-100 text-primary-700 font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full">Subscription Plans</span>
@@ -431,7 +415,6 @@
                                     </div>
                                     
                                     <div class="space-y-1.5 max-h-[340px] overflow-y-auto pr-0.5">
-                                        <!-- Card 1 -->
                                         <div id="mini-tile-swing" onclick="selectStrategy('Vector Swing', '3 Months', '₹7,500')" class="bg-white border-2 border-primary-500 rounded-xl p-2.5 shadow-sm cursor-pointer hover:bg-slate-50 transition-all relative">
                                             <div class="absolute top-2 right-2 text-primary-500 badge-icon"><i data-lucide="check-circle" class="w-3.5 h-3.5 fill-primary-500 text-white"></i></div>
                                             <div class="flex justify-between items-start mb-1">
@@ -444,7 +427,6 @@
                                             </div>
                                         </div>
 
-                                        <!-- Card 2 -->
                                         <div id="mini-tile-thematic" onclick="selectStrategy('Vector Thematic', '6 Months', '₹14,000')" class="bg-white border border-slate-200 rounded-xl p-2.5 shadow-sm cursor-pointer hover:bg-slate-50 transition-all relative">
                                             <div class="flex justify-between items-start mb-1">
                                                 <h5 class="text-[10px] font-extrabold text-slate-900">Vector Thematic</h5>
@@ -456,7 +438,6 @@
                                             </div>
                                         </div>
 
-                                        <!-- Card 3 -->
                                         <div id="mini-tile-horizon" onclick="selectStrategy('Vector Horizon', '12 Months', '₹25,000')" class="bg-white border border-slate-200 rounded-xl p-2.5 shadow-sm cursor-pointer hover:bg-slate-50 transition-all relative">
                                             <div class="flex justify-between items-start mb-1">
                                                 <h5 class="text-[10px] font-extrabold text-slate-900">Vector Horizon</h5>
@@ -468,7 +449,6 @@
                                             </div>
                                         </div>
 
-                                        <!-- Card 4 -->
                                         <div id="mini-tile-rotation" onclick="selectStrategy('Vector MF Rotation', '3 Months', '₹5,000')" class="bg-white border border-slate-200 rounded-xl p-2.5 shadow-sm cursor-pointer hover:bg-slate-50 transition-all relative">
                                             <div class="flex justify-between items-start mb-1">
                                                 <h5 class="text-[10px] font-extrabold text-slate-900">Vector MF Rotation</h5>
@@ -487,7 +467,6 @@
                                     </button>
                                 </div>
 
-                                <!-- PHASE 2: LINK DEMAT BROKER -->
                                 <div id="screen-content-2" class="hidden transition-all duration-300 space-y-3">
                                     <div id="broker-selection-panel" class="space-y-2">
                                         <div class="text-center">
@@ -519,7 +498,6 @@
                                     </div>
                                 </div>
 
-                                <!-- PHASE 3: SECURE DEPLOYMENT SUMMARY -->
                                 <div id="screen-content-3" class="hidden transition-all duration-300 space-y-3">
                                     <div id="rebalance-normal-state" class="space-y-3">
                                         <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-sm border-l-4 border-l-primary-500">
@@ -549,15 +527,12 @@
         </div>
     </section>
 
-    <!-- ABOUT ANALYST SECTION -->
     <section id="analyst" class="py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-gradient-to-tr from-slate-50 to-primary-50/20 rounded-3xl border border-slate-200/80 shadow-md overflow-hidden">
                 <div class="grid md:grid-cols-5 h-full">
-                    <!-- Photo Column -->
                     <div class="md:col-span-2 relative min-h-[460px] bg-slate-950 flex flex-col justify-end">
-                        <!-- Direct integration targeting the updated high-fidelity image framework -->
-                        <img src="PAimage1_2.png" alt="Principal Analyst - Chandrashekhar Dhone" class="absolute inset-0 w-full h-full object-cover object-top block z-0" />
+                        <img src="PAimage.png" alt="Principal Analyst - Chandrashekhar Dhone" class="absolute inset-0 w-full h-full object-cover object-top block z-0" />
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10 pointer-events-none"></div>
                         <div class="p-8 z-20 text-white relative">
                             <h3 class="text-2xl font-extrabold tracking-tight mb-1">Chandrashekhar Dhone</h3>
@@ -569,7 +544,6 @@
                         </div>
                     </div>
                     
-                    <!-- Biography Text Column -->
                     <div class="md:col-span-3 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-white relative z-20">
                         <span class="text-primary-600 font-bold uppercase tracking-widest text-xs block mb-2">The Mind behind the Process</span>
                         <h3 class="text-3xl font-extrabold text-slate-900 mb-6 font-serif">Meet The Principal Analyst</h3>
@@ -586,7 +560,6 @@
         </div>
     </section>
 
-    <!-- FAQ SECTION (NESTED ACCORDIONS) -->
     <section id="faq" class="py-24 bg-white border-t border-slate-100 relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -596,7 +569,6 @@
             </div>
 
             <div class="space-y-6">
-                <!-- Section 1 -->
                 <details class="group bg-slate-50 border border-slate-200/80 rounded-2xl p-4 md:p-6 smooth-fade">
                     <summary class="flex justify-between items-center font-extrabold text-slate-900 text-base sm:text-lg cursor-pointer list-none select-none group-open:text-primary-600">
                         <span class="flex items-center gap-3"><i data-lucide="help-circle" class="w-5 h-5 text-primary-500"></i> 1. About Diraa Capital & smallcase</span>
@@ -626,7 +598,6 @@
                     </div>
                 </details>
 
-                <!-- Section 2 -->
                 <details class="group bg-slate-50 border border-slate-200/80 rounded-2xl p-4 md:p-6 smooth-fade">
                     <summary class="flex justify-between items-center font-extrabold text-slate-900 text-base sm:text-lg cursor-pointer list-none select-none group-open:text-primary-600">
                         <span class="flex items-center gap-3"><i data-lucide="trending-up" class="w-5 h-5 text-primary-500"></i> 2. Investment Philosophy & Strategy</span>
@@ -648,7 +619,6 @@
                     </div>
                 </details>
 
-                <!-- Section 3 -->
                 <details class="group bg-slate-50 border border-slate-200/80 rounded-2xl p-4 md:p-6 smooth-fade">
                     <summary class="flex justify-between items-center font-extrabold text-slate-900 text-base sm:text-lg cursor-pointer list-none select-none group-open:text-primary-600">
                         <span class="flex items-center gap-3"><i data-lucide="cpu" class="w-5 h-5 text-primary-500"></i> 3. Execution & Operations</span>
@@ -670,7 +640,6 @@
                     </div>
                 </details>
 
-                <!-- Section 4 -->
                 <details class="group bg-slate-50 border border-slate-200/80 rounded-2xl p-4 md:p-6 smooth-fade">
                     <summary class="flex justify-between items-center font-extrabold text-slate-900 text-base sm:text-lg cursor-pointer list-none select-none group-open:text-primary-600">
                         <span class="flex items-center gap-3"><i data-lucide="credit-card" class="w-5 h-5 text-primary-500"></i> 4. Fees, Account Management & Taxes</span>
@@ -699,12 +668,10 @@
         </div>
     </section>
 
-    <!-- MANDATORY COMPLIANCE SEBI DISCLOSURES & ORIGINAL GRIEVANCES PANEL -->
     <section id="contact" class="py-24 bg-slate-50 border-t border-b border-slate-100 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12">
                 
-                <!-- Grievance Redressal Channels -->
                 <div class="lg:col-span-5 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
                     <div>
                         <h3 class="text-lg font-bold text-slate-950 mb-2 font-serif">Grievance Redressal</h3>
@@ -744,7 +711,6 @@
                     </div>
                 </div>
 
-                <!-- SEBI Mandatory Disclaimer Card -->
                 <div class="lg:col-span-7 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-2 mb-4 text-amber-600">
@@ -784,7 +750,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="bg-white border-t border-slate-200 text-slate-500 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-slate-400">
             <p>Rules-based, analytical research frameworks built around price structure.</p>
@@ -792,7 +757,6 @@
         </div>
     </footer>
 
-    <!-- INTERACTIVE SCRIPTS CODE ENGINE -->
     <script>
         lucide.createIcons();
 
@@ -924,7 +888,6 @@
             document.documentElement.style.fontSize = `${currentZoom}%`;
         }
 
-        // High contrast framework handler
         function toggleHighContrast() {
             document.body.classList.toggle('high-contrast-mode');
             accessMenu.classList.add('hidden');
