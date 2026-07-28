@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html class="scroll-smooth" lang="en">
@@ -12,133 +13,133 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet"/>
 <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    colors: {
-                        primary: {
-                            50: '#f0fdf4',
-                            100: '#dcfce7',
-                            200: '#bbf7d0',
-                            500: '#10b981',
-                            600: '#059669',
-                            700: '#047857',
-                            850: '#064e3b',
-                            900: '#022c22'
-                        },
-                        smallcase: {
-                            500: '#1f7ae0',
-                            600: '#1a69c4'
-                        },
-                        accent: {
-                            50: '#f7fee7',
-                            100: '#ecfccb',
-                            500: '#84cc16',
-                            600: '#65a30d',
-                        },
-                        slate: {
-                            50: '#f8fafc',
-                            100: '#f1f5f9',
-                            200: '#e2e8f0',
-                            300: '#cbd5e1',
-                            700: '#334155',
-                            800: '#1e293b',
-                            900: '#0f172a',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+ tailwind.config = {
+ theme: {
+ extend: {
+ fontFamily: {
+ sans: ['Inter', 'sans-serif'],
+ serif: ['Playfair Display', 'serif'],
+ },
+ colors: {
+ primary: {
+ 50: '#f0fdf4',
+ 100: '#dcfce7',
+ 200: '#bbf7d0',
+ 500: '#10b981',
+ 600: '#059669',
+ 700: '#047857',
+ 850: '#064e3b',
+ 900: '#022c22'
+ },
+ smallcase: {
+ 500: '#1f7ae0',
+ 600: '#1a69c4'
+ },
+ accent: {
+ 50: '#f7fee7',
+ 100: '#ecfccb',
+ 500: '#84cc16',
+ 600: '#65a30d',
+ },
+ slate: {
+ 50: '#f8fafc',
+ 100: '#f1f5f9',
+ 200: '#e2e8f0',
+ 300: '#cbd5e1',
+ 700: '#334155',
+ 800: '#1e293b',
+ 900: '#0f172a',
+ }
+ }
+ }
+ }
+ }
+ </script>
 <style>
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f8fafc; }
-        ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #059669; }
-        
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-        }
+ ::-webkit-scrollbar { width: 8px; }
+ ::-webkit-scrollbar-track { background: #f8fafc; }
+ ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 4px; }
+ ::-webkit-scrollbar-thumb:hover { background: #059669; }
+ 
+.glass-nav {
+ background: rgba(255, 255, 255, 0.95);
+ backdrop-filter: blur(12px);
+ }
 
-        .dot-grid {
-            background-image: radial-gradient(#e2e8f0 1.5px, transparent 1.5px);
-            background-size: 24px 24px;
-        }
+ .dot-grid {
+ background-image: radial-gradient(#e2e8f0 1.5px, transparent 1.5px);
+ background-size: 24px 24px;
+ }
 
-        .hero-bg-card {
-            background-image: linear-gradient(to right, #ffffff 42%, rgba(255, 255, 255, 0.85) 55%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0) 100%), url('Hero image.jpg');
-            background-size: cover;
-            background-position: right center;
-            background-repeat: no-repeat;
-        }
+ .hero-bg-card {
+ background-image: linear-gradient(to right, #ffffff 42%, rgba(255, 255, 255, 0.85) 55%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0) 100%), url('Hero image.jpg');
+ background-size: cover;
+ background-position: right center;
+ background-repeat: no-repeat;
+ }
 
-        @media (max-width: 1024px) {
-            .hero-bg-card {
-                background-image: linear-gradient(to right, #ffffff 52%, rgba(255, 255, 255, 0.9) 70%, rgba(255, 255, 255, 0.3) 100%), url('Hero image.jpg');
-            }
-        }
+ @media (max-width: 1024px) {
+ .hero-bg-card {
+ background-image: linear-gradient(to right, #ffffff 52%, rgba(255, 255, 255, 0.9) 70%, rgba(255, 255, 255, 0.3) 100%), url('Hero image.jpg');
+ }
+ }
 
-        @media (max-width: 768px) {
-            .hero-bg-card {
-                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.96) 65%, rgba(255, 255, 255, 0.82) 100%), url('Hero image.jpg');
-                background-position: center right;
-            }
-        }
+ @media (max-width: 768px) {
+ .hero-bg-card {
+ background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.96) 65%, rgba(255, 255, 255, 0.82) 100%), url('Hero image.jpg');
+ background-position: center right;
+ }
+ }
 
-        @keyframes successPop {
-            0% { transform: scale(0.8); opacity: 0; }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); opacity: 1; }
-        }
-        .success-animation {
-            animation: successPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-        }
+ @keyframes successPop {
+ 0% { transform: scale(0.8); opacity: 0; }
+ 50% { transform: scale(1.1); }
+ 100% { transform: scale(1); opacity: 1; }
+ }
+ .success-animation {
+ animation: successPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+ }
 
-        .smooth-fade {
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+ .smooth-fade {
+ transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+ }
 
-        summary::-webkit-details-marker { display: none; }
-        summary { list-style: none; }
+ summary::-webkit-details-marker { display: none; }
+ summary { list-style: none; }
 
-        /* Accessibility Assist Themes */
-        .high-contrast-mode {
-            background-color: #000000 !important;
-            color: #ffffff !important;
-        }
-        .high-contrast-mode p, 
-        .high-contrast-mode span, 
-        .high-contrast-mode li, 
-        .high-contrast-mode label,
-        .high-contrast-mode h1,
-        .high-contrast-mode h2,
-        .high-contrast-mode h3,
-        .high-contrast-mode h4,
-        .high-contrast-mode h5,
-        .high-contrast-mode h6 {
-            color: #ffffff !important;
-        }
-        .high-contrast-mode section, 
-        .high-contrast-mode nav, 
-        .high-contrast-mode footer, 
-        .high-contrast-mode div.bg-white,
-        .high-contrast-mode div.bg-slate-50,
-        .high-contrast-mode div.bg-slate-100 {
-            background-color: #111111 !important;
-            border-color: #ffffff !important;
-        }
-        .high-contrast-mode button, 
-        .high-contrast-mode a {
-            background-color: #000000 !important;
-            color: #00ff00 !important;
-            border: 2px solid #00ff00 !important;
-        }
-    </style>
+ /* Accessibility Assist Themes */
+ .high-contrast-mode {
+ background-color: #000000 !important;
+ color: #ffffff !important;
+ }
+ .high-contrast-mode p, 
+.high-contrast-mode span, 
+.high-contrast-mode li, 
+.high-contrast-mode label,
+ .high-contrast-mode h1,
+ .high-contrast-mode h2,
+ .high-contrast-mode h3,
+ .high-contrast-mode h4,
+ .high-contrast-mode h5,
+ .high-contrast-mode h6 {
+ color: #ffffff !important;
+ }
+ .high-contrast-mode section, 
+.high-contrast-mode nav, 
+.high-contrast-mode footer, 
+.high-contrast-mode div.bg-white,
+ .high-contrast-mode div.bg-slate-50,
+ .high-contrast-mode div.bg-slate-100 {
+ background-color: #111111 !important;
+ border-color: #ffffff !important;
+ }
+ .high-contrast-mode button, 
+.high-contrast-mode a {
+ background-color: #000000 !important;
+ color: #00ff00 !important;
+ border: 2px solid #00ff00 !important;
+ }
+ </style>
 </head>
 <body class="font-sans text-slate-700 bg-white antialiased selection:bg-primary-500 selection:text-white transition-all duration-150">
 <!-- FLOATING LANGUAGE CONVERTER (LEFT) -->
@@ -167,7 +168,7 @@
 </div>
 <button class="w-full py-1.5 px-3 bg-slate-100 hover:bg-slate-900 hover:text-emerald-400 text-slate-800 font-bold text-xs rounded-lg transition-all flex items-center gap-2 justify-center" onclick="toggleHighContrast()">
 <i class="w-3.5 h-3.5" data-lucide="eye"></i> High Contrast Mode
-            </button>
+ </button>
 </div>
 <button class="w-11 h-11 bg-slate-900 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary-600 transition-all border border-white/10" id="accessibility-toggle">
 <i class="w-5 h-5" data-lucide="accessibility"></i>
@@ -194,7 +195,7 @@
 <a class="text-slate-600 hover:text-primary-600 font-medium transition-colors text-sm" href="#faq" id="nav-faq">FAQs</a>
 <a class="text-slate-600 hover:text-primary-600 font-medium transition-colors text-sm" href="#contact" id="nav-disclosures">Disclosures</a>
 <a class="bg-primary-600 hover:bg-primary-700 text-white px-5 py-2.5 rounded-lg font-semibold transition-all text-sm flex items-center gap-1.5" href="https://www.smallcase.com" target="_blank">
-                        smallcase <i class="w-4 h-4" data-lucide="external-link"></i>
+ smallcase <i class="w-4 h-4" data-lucide="external-link"></i>
 </a>
 </div>
 <div class="md:hidden flex items-center">
@@ -218,29 +219,29 @@
 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
 <span class="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
 </span>
-                        SEBI Registered Research Analyst • INH000XXXXXX
-                    </div>
+ SEBI Registered Research Analyst • INH000XXXXXX
+ </div>
 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-none mb-5" id="hero-headline">
-                        Systematic Market Participation Built Around <span class="text-primary-600 font-serif italic block sm:inline">Process, Momentum &amp; Structure</span>
+ Systematic Market Participation Built Around <span class="text-primary-600 font-serif italic block sm:inline">Process, Momentum &amp; Structure</span>
 </h1>
 <p class="text-base text-slate-600 mb-4 leading-relaxed" id="hero-subtext">
-                        Diraa Capital is an equity research platform led by our SEBI Registered Research Analyst, focused on systematic frameworks designed around market leadership, relative strength, structured opportunities, and disciplined participation across evolving market cycles.
-                    </p>
+ Diraa Capital is an equity research platform led by our SEBI Registered Research Analyst, focused on systematic frameworks designed around market leadership, relative strength, structured opportunities, and disciplined participation across evolving market cycles.
+ </p>
 <p class="text-base text-slate-600 mb-6 leading-relaxed">
-                        Our process focuses on identifying established market leaders and participating through controlled pullbacks, consolidations, and favourable market structures using evidence-based research frameworks.
-                    </p>
+ Our process focuses on identifying established market leaders and participating through controlled pullbacks, consolidations, and favourable market structures using evidence-based research frameworks.
+ </p>
 <div class="border-l-4 border-primary-500 pl-4 py-2 mb-6 bg-primary-50/50 rounded-r-xl max-w-xl">
 <p class="text-xs sm:text-sm text-slate-600 italic" id="hero-linguistic-text">
 <strong class="text-primary-700 not-italic">Diraa</strong> means direction in Swahili, aligning with the Sanskrit <strong class="text-slate-950 font-semibold">"Dheer" (धीर)</strong> — representing patience, steadiness, thoughtful action, and disciplined progression.
-                        </p>
+ </p>
 </div>
 <div class="flex flex-col sm:flex-row gap-4">
 <a class="inline-flex justify-center items-center gap-2 bg-primary-600 text-white px-8 py-3.5 rounded-lg font-bold hover:bg-primary-700 transition-all text-sm" href="#frameworks" id="btn-explore">
-                            Explore Frameworks <i class="w-4 h-4" data-lucide="compass"></i>
+ Explore Frameworks <i class="w-4 h-4" data-lucide="compass"></i>
 </a>
 <a class="inline-flex justify-center items-center gap-2 bg-slate-50 text-slate-700 border border-slate-200 px-8 py-3.5 rounded-lg font-semibold hover:bg-slate-100 transition-all text-sm" href="#process" id="btn-works">
-                            How It Works
-                        </a>
+ How It Works
+ </a>
 </div>
 </div>
 </div>
@@ -254,11 +255,11 @@
 <span class="text-primary-600 font-bold uppercase tracking-widest text-xs block mb-2">Process Over Prediction</span>
 <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 font-serif">Structured Decision-Making</h2>
 <p class="text-slate-600 leading-relaxed mb-4 text-sm">
-                        We believe consistent outcomes are better supported by disciplined frameworks, evidence-based research, and structured decision-making.
-                    </p>
+ We believe consistent outcomes are better supported by disciplined frameworks, evidence-based research, and structured decision-making.
+ </p>
 <p class="text-slate-600 leading-relaxed mb-8 text-sm">
-                        The objective of Diraa Capital is to identify areas of established market leadership and participate through structured opportunities where momentum, market evidence, and risk conditions align favourably. Every model portfolio update follows a repeatable research framework designed to reduce emotional bias while maintaining consistency across changing market environments.
-                    </p>
+ The objective of Diraa Capital is to identify areas of established market leadership and participate through structured opportunities where momentum, market evidence, and risk conditions align favourably. Every model portfolio update follows a repeatable research framework designed to reduce emotional bias while maintaining consistency across changing market environments.
+ </p>
 <div class="grid grid-cols-2 gap-4">
 <div class="flex items-center gap-2"><i class="text-primary-600 w-4 h-4" data-lucide="check-circle"></i><span class="text-xs font-bold text-slate-800 font-mono">100% Rules-Based</span></div>
 <div class="flex items-center gap-2"><i class="text-primary-600 w-4 h-4" data-lucide="check-circle"></i><span class="text-xs font-bold text-slate-800 font-mono">Market Leadership</span></div>
@@ -294,7 +295,7 @@
 </div>
 <div class="pt-4 border-t border-slate-100 flex items-center justify-between mt-4">
 <span class="text-[10px] font-semibold text-slate-500">Weekly*</span>
-<a class="text-xs font-bold text-primary-700" href="https://www.smallcase.com" target="_blank">Learn More →</a>
+<a class="text-xs font-bold text-primary-700" href="https://www.smallcase.com" target="_blank">Explore smallcase →</a>
 </div>
 </div>
 <div class="bg-white rounded-2xl border border-slate-300 shadow-sm overflow-hidden flex flex-col justify-between p-6">
@@ -304,7 +305,7 @@
 </div>
 <div class="pt-4 border-t border-slate-100 flex items-center justify-between mt-4">
 <span class="text-[10px] font-semibold text-slate-500">Monthly*</span>
-<a class="text-xs font-bold text-primary-700" href="https://www.smallcase.com" target="_blank">Learn More →</a>
+<a class="text-xs font-bold text-primary-700" href="https://www.smallcase.com" target="_blank">Explore smallcase →</a>
 </div>
 </div>
 <div class="bg-white rounded-2xl border border-slate-300 shadow-sm overflow-hidden flex flex-col justify-between p-6">
@@ -314,7 +315,7 @@
 </div>
 <div class="pt-4 border-t border-slate-100 flex items-center justify-between mt-4">
 <span class="text-[10px] font-semibold text-slate-500">Quarterly*</span>
-<a class="text-xs font-bold text-primary-700" href="https://www.smallcase.com" target="_blank">Learn More →</a>
+<a class="text-xs font-bold text-primary-700" href="https://www.smallcase.com" target="_blank">Explore smallcase →</a>
 </div>
 </div>
 <div class="bg-white rounded-2xl border border-slate-300 shadow-sm overflow-hidden flex flex-col justify-between p-6">
@@ -324,7 +325,7 @@
 </div>
 <div class="pt-4 border-t border-slate-100 flex items-center justify-between mt-4">
 <span class="text-[10px] font-semibold text-slate-500">Monthly*</span>
-<a class="text-xs font-bold text-primary-700" href="https://www.smallcase.com" target="_blank">Learn More →</a>
+<a class="text-xs font-bold text-primary-700" href="https://www.smallcase.com" target="_blank">Explore smallcase →</a>
 </div>
 </div>
 <div class="bg-white from-white to-primary-50/10 rounded-2xl border border-slate-300 shadow-sm overflow-hidden flex flex-col justify-between p-6 md:col-span-2 lg:col-span-1">
@@ -334,7 +335,7 @@
 </div>
 <div class="pt-4 border-t border-slate-100 flex items-center justify-between mt-4">
 <span class="text-[10px] font-semibold text-slate-500">Monthly*</span>
-<a class="text-xs font-bold text-primary-700" href="https://www.smallcase.com" target="_blank">Learn More →</a>
+<a class="text-xs font-bold text-primary-700" href="https://www.smallcase.com" target="_blank">Explore smallcase →</a>
 </div>
 </div>
 </div><p class="mt-6 text-xs text-center italic text-slate-500">*Review frequency is indicative and may vary depending on market conditions, portfolio changes and research requirements.</p>
@@ -415,33 +416,33 @@
 </div>
 <div class="space-y-1.5 max-h-[340px] overflow-y-auto pr-0.5">
 <!-- Card 1 -->
-<div class="bg-white border-2 border-primary-500 rounded-xl p-2.5 shadow-sm cursor-pointer hover:bg-slate-50 transition-all relative" id="mini-tile-swing" onclick="selectStrategy('Vector Swing', '3 Months', '₹7,500')">
+<div class="bg-white border-2 border-primary-500 rounded-xl p-2.5 shadow-sm cursor-pointer hover:bg-slate-50 transition-all relative" id="mini-tile-swing" onclick="selectStrategy('Vector Swing', '12 Months', '₹15,000')">
 <div class="absolute top-2 right-2 text-primary-500 badge-icon"><i class="w-3.5 h-3.5 fill-primary-500 text-white" data-lucide="check-circle"></i></div>
 <div class="flex justify-between items-start mb-1">
 <h5 class="text-[10px] font-extrabold text-slate-900">Vector Swing</h5>
-<span class="text-[10px] font-black text-primary-600">₹7,500</span>
+<span class="text-[10px] font-black text-primary-600">₹15,000</span>
 </div>
 <div class="flex justify-between items-center text-[8px] text-slate-400">
 <span>Controlled Pullback Architecture</span>
-<span class="bg-slate-100 text-slate-600 px-1 rounded font-semibold">3 Mos</span>
+<span class="bg-slate-100 text-slate-600 px-1 rounded font-semibold">12 Mos</span>
 </div>
 </div>
 <!-- Card 2 -->
-<div class="bg-white border border-slate-200 rounded-xl p-2.5 shadow-sm cursor-pointer hover:bg-slate-50 transition-all relative" id="mini-tile-thematic" onclick="selectStrategy('Vector Thematic', '6 Months', '₹14,000')">
+<div class="bg-white border border-slate-200 rounded-xl p-2.5 shadow-sm cursor-pointer hover:bg-slate-50 transition-all relative" id="mini-tile-thematic" onclick="selectStrategy('Vector Thematic', '12 Months', '₹25,000')">
 <div class="flex justify-between items-start mb-1">
 <h5 class="text-[10px] font-extrabold text-slate-900">Vector Thematic</h5>
-<span class="text-[10px] font-black text-slate-700">₹14,000</span>
+<span class="text-[10px] font-black text-slate-700">₹25,000</span>
 </div>
 <div class="flex justify-between items-center text-[8px] text-slate-400">
 <span>Sector Leadership Rotations</span>
-<span class="bg-slate-100 text-slate-600 px-1 rounded font-semibold">6 Mos</span>
+<span class="bg-slate-100 text-slate-600 px-1 rounded font-semibold">12 Mos</span>
 </div>
 </div>
 <!-- Card 3 -->
-<div class="bg-white border border-slate-200 rounded-xl p-2.5 shadow-sm cursor-pointer hover:bg-slate-50 transition-all relative" id="mini-tile-horizon" onclick="selectStrategy('Vector Horizon', '12 Months', '₹25,000')">
+<div class="bg-white border border-slate-200 rounded-xl p-2.5 shadow-sm cursor-pointer hover:bg-slate-50 transition-all relative" id="mini-tile-horizon" onclick="selectStrategy('Vector Horizon', '12 Months', '₹55,000')">
 <div class="flex justify-between items-start mb-1">
 <h5 class="text-[10px] font-extrabold text-slate-900">Vector Horizon</h5>
-<span class="text-[10px] font-black text-slate-700">₹25,000</span>
+<span class="text-[10px] font-black text-slate-700">₹55,000</span>
 </div>
 <div class="flex justify-between items-center text-[8px] text-slate-400">
 <span>Resilient Long-Term Dominance</span>
@@ -449,31 +450,31 @@
 </div>
 </div>
 <!-- Card 4 -->
-<div class="bg-white border border-slate-200 rounded-xl p-2.5 shadow-sm cursor-pointer hover:bg-slate-50 transition-all relative" id="mini-tile-rotation" onclick="selectStrategy('Vector MF Rotation', '3 Months', '₹5,000')">
+<div class="bg-white border border-slate-200 rounded-xl p-2.5 shadow-sm cursor-pointer hover:bg-slate-50 transition-all relative" id="mini-tile-rotation" onclick="selectStrategy('Vector MF Rotation', '12 Months', '₹10,000')">
 <div class="flex justify-between items-start mb-1">
 <h5 class="text-[10px] font-extrabold text-slate-900">Vector MF Rotation</h5>
-<span class="text-[10px] font-black text-slate-700">₹5,000</span>
+<span class="text-[10px] font-black text-slate-700">₹10,000</span>
 </div>
 <div class="flex justify-between items-center text-[8px] text-slate-400">
 <span>Systematic Category Baskets</span>
-<span class="bg-slate-100 text-slate-600 px-1 rounded font-semibold">3 Mos</span>
+<span class="bg-slate-100 text-slate-600 px-1 rounded font-semibold">12 Mos</span>
 </div>
 </div>
 <!-- Card 5 -->
-<div class="bg-white border border-slate-200 rounded-xl p-2.5 shadow-sm cursor-pointer hover:bg-slate-50 transition-all relative" id="mini-tile-anchor" onclick="selectStrategy('Vector Anchor', '3 Months', '₹6,000')">
+<div class="bg-white border border-slate-200 rounded-xl p-2.5 shadow-sm cursor-pointer hover:bg-slate-50 transition-all relative" id="mini-tile-anchor" onclick="selectStrategy('Vector Anchor', '12 Months', '₹10,000')">
 <div class="flex justify-between items-start mb-1">
 <h5 class="text-[10px] font-extrabold text-slate-900">Vector Anchor</h5>
-<span class="text-[10px] font-black text-slate-700">₹6,000</span>
+<span class="text-[10px] font-black text-slate-700">₹10,000</span>
 </div>
 <div class="flex justify-between items-center text-[8px] text-slate-400">
 <span>Income &amp; Yield Stabilization</span>
-<span class="bg-slate-100 text-slate-600 px-1 rounded font-semibold">3 Mos</span>
+<span class="bg-slate-100 text-slate-600 px-1 rounded font-semibold">12 Mos</span>
 </div>
 </div>
 </div>
 <p class="text-[7.5px] text-slate-400 italic text-center leading-none">Subscription flat fees are inclusive of premium research access. GST applied at checkout.</p>
 <button class="w-full bg-primary-600 hover:bg-primary-700 text-white rounded-xl py-2.5 text-center text-[11px] font-bold shadow-md transition-colors" onclick="switchProcessStep(2)">
-                                        Subscribe to <span id="selected-strategy-btn-label">Vector Swing</span>
+ Subscribe to <span id="selected-strategy-btn-label">Vector Swing</span>
 </button>
 </div>
 <!-- PHASE 2: LINK DEMAT BROKER -->
@@ -497,11 +498,11 @@
 <p class="text-[11px] font-extrabold text-slate-900" id="allocation-strategy-name">Vector Swing</p>
 <div class="flex justify-between border-b border-slate-100 pb-1 text-[9px]">
 <span class="text-slate-400">Access Period:</span>
-<span class="font-bold text-slate-800" id="allocation-period-display">3 Months</span>
+<span class="font-bold text-slate-800" id="allocation-period-display">12 Months</span>
 </div>
 <div class="flex justify-between pt-0.5 text-[10px]">
 <span class="text-slate-500 font-medium">Subscription Rate:</span>
-<input class="w-24 text-right border-none font-extrabold text-slate-900 focus:outline-none bg-transparent p-0" id="custom-investment-input" readonly="" type="text" value="₹7,500"/>
+<input class="w-24 text-right border-none font-extrabold text-slate-900 focus:outline-none bg-transparent p-0" id="custom-investment-input" readonly="" type="text" value="₹15,000"/>
 </div>
 </div>
 <button class="w-full bg-primary-600 text-white rounded-xl py-2 text-xs font-black shadow-md" onclick="confirmAllocationAndContinue()">Proceed to Activation</button>
@@ -513,7 +514,7 @@
 <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-sm border-l-4 border-l-primary-500">
 <span class="text-[8px] font-bold text-primary-600 block uppercase">Ready to Transact</span>
 <h5 class="text-[11px] font-extrabold text-slate-900" id="executing-strategy-headline">Vector Swing Portfolio</h5>
-<p class="text-[9px] text-slate-400 mt-1">Activating full advisor research access terms for <span class="font-bold text-slate-800" id="final-alloc-display">₹7,500</span>.</p>
+<p class="text-[9px] text-slate-400 mt-1">Activating full advisor research access terms for <span class="font-bold text-slate-800" id="final-alloc-display">₹15,000</span>.</p>
 </div>
 <button class="w-full bg-emerald-600 text-white rounded-xl py-2 text-xs font-black shadow-lg shadow-emerald-500/15" onclick="triggerMockRebalance()">Confirm &amp; Activate Plan</button>
 </div>
@@ -708,10 +709,10 @@
 <div class="space-y-4 text-xs text-slate-500 leading-relaxed">
 <p>
 <strong>Diraa Capital</strong> operates as a SEBI Registered Research Analyst Intermediary. The model portfolios and structured analytics represent standardized, evidence-driven observations intended strictly for computational research communication and educational use.
-                            </p>
+ </p>
 <p class="font-semibold text-slate-800 border-l-2 border-primary-500 pl-3 bg-slate-50/50 py-1.5 pr-2 rounded-r-lg">
-                                "Investment in securities market are subject to market risks. Read all the related documents carefully before investing."
-                            </p>
+ "Investment in securities market are subject to market risks. Read all the related documents carefully before investing."
+ </p>
 </div>
 </div>
 <div class="border-t border-slate-200 pt-6 mt-6 flex flex-wrap gap-4 items-center justify-between">
@@ -750,145 +751,145 @@
 </footer>
 <!-- INTERACTIVE SCRIPTS CODE ENGINE -->
 <script>
-        lucide.createIcons();
+ lucide.createIcons();
 
-        // Overlay dropdown visibility states
-        const langToggle = document.getElementById('language-toggle');
-        const langMenu = document.getElementById('language-menu');
-        const accessToggle = document.getElementById('accessibility-toggle');
-        const accessMenu = document.getElementById('accessibility-menu');
+ // Overlay dropdown visibility states
+ const langToggle = document.getElementById('language-toggle');
+ const langMenu = document.getElementById('language-menu');
+ const accessToggle = document.getElementById('accessibility-toggle');
+ const accessMenu = document.getElementById('accessibility-menu');
 
-        langToggle.addEventListener('click', (e) => { e.stopPropagation(); langMenu.classList.toggle('hidden'); accessMenu.classList.add('hidden'); });
-        accessToggle.addEventListener('click', (e) => { e.stopPropagation(); accessMenu.classList.toggle('hidden'); langMenu.classList.add('hidden'); });
-        document.addEventListener('click', () => { langMenu.classList.add('hidden'); accessMenu.classList.add('hidden'); });
+ langToggle.addEventListener('click', (e) => { e.stopPropagation(); langMenu.classList.toggle('hidden'); accessMenu.classList.add('hidden'); });
+ accessToggle.addEventListener('click', (e) => { e.stopPropagation(); accessMenu.classList.toggle('hidden'); langMenu.classList.add('hidden'); });
+ document.addEventListener('click', () => { langMenu.classList.add('hidden'); accessMenu.classList.add('hidden'); });
 
-        // Simulator Interactive Engine Logic
-        let selectedStrategy = 'Vector Swing';
-        let selectedPeriod = '3 Months';
-        let selectedRate = '₹7,500';
-        let selectedBroker = '';
+ // Simulator Interactive Engine Logic
+ let selectedStrategy = 'Vector Swing';
+ let selectedPeriod = '12 Months';
+ let selectedRate = '₹15,000';
+ let selectedBroker = '';
 
-        function launchMockApp() {
-            document.getElementById('screen-content-0').classList.add('hidden');
-            document.getElementById('screen-content-1').classList.remove('hidden');
-            lucide.createIcons();
-        }
+ function launchMockApp() {
+ document.getElementById('screen-content-0').classList.add('hidden');
+ document.getElementById('screen-content-1').classList.remove('hidden');
+ lucide.createIcons();
+ }
 
-        function selectStrategy(name, period, rate) {
-            selectedStrategy = name;
-            selectedPeriod = period;
-            selectedRate = rate;
+ function selectStrategy(name, period, rate) {
+ selectedStrategy = name;
+ selectedPeriod = period;
+ selectedRate = rate;
 
-            document.getElementById('selected-strategy-btn-label').innerText = name;
-            document.getElementById('allocation-strategy-name').innerText = name;
-            document.getElementById('allocation-period-display').innerText = period;
-            document.getElementById('custom-investment-input').value = rate;
-            document.getElementById('executing-strategy-headline').innerText = name + ' Plan';
-            document.getElementById('final-alloc-display').innerText = rate;
+ document.getElementById('selected-strategy-btn-label').innerText = name;
+ document.getElementById('allocation-strategy-name').innerText = name;
+ document.getElementById('allocation-period-display').innerText = period;
+ document.getElementById('custom-investment-input').value = rate;
+ document.getElementById('executing-strategy-headline').innerText = name + ' Plan';
+ document.getElementById('final-alloc-display').innerText = rate;
 
-            const tiles = {
-                'Vector Swing': 'mini-tile-swing',
-                'Vector Thematic': 'mini-tile-thematic',
-                'Vector Horizon': 'mini-tile-horizon',
-                'Vector MF Rotation': 'mini-tile-rotation',
-                'Vector Anchor': 'mini-tile-anchor'
-            };
+ const tiles = {
+ 'Vector Swing': 'mini-tile-swing',
+ 'Vector Thematic': 'mini-tile-thematic',
+ 'Vector Horizon': 'mini-tile-horizon',
+ 'Vector MF Rotation': 'mini-tile-rotation',
+ 'Vector Anchor': 'mini-tile-anchor'
+ };
 
-            Object.keys(tiles).forEach(key => {
-                const element = document.getElementById(tiles[key]);
-                if (!element) return;
-                if (key === name) {
-                    element.classList.remove('border-slate-200');
-                    element.classList.add('border-primary-500', 'border-2');
-                    if (!element.querySelector('.badge-icon')) {
-                        const iconDiv = document.createElement('div');
-                        iconDiv.className = 'absolute top-2 right-2 text-primary-500 badge-icon';
-                        iconDiv.innerHTML = '<i data-lucide="check-circle" class="w-3.5 h-3.5 fill-primary-500 text-white"></i>';
-                        element.appendChild(iconDiv);
-                        lucide.createIcons();
-                    }
-                } else {
-                    element.classList.remove('border-primary-500', 'border-2');
-                    element.classList.add('border-slate-200');
-                    const badge = element.querySelector('.badge-icon');
-                    if (badge) badge.remove();
-                }
-            });
-        }
+ Object.keys(tiles).forEach(key => {
+ const element = document.getElementById(tiles[key]);
+ if (!element) return;
+ if (key === name) {
+ element.classList.remove('border-slate-200');
+ element.classList.add('border-primary-500', 'border-2');
+ if (!element.querySelector('.badge-icon')) {
+ const iconDiv = document.createElement('div');
+ iconDiv.className = 'absolute top-2 right-2 text-primary-500 badge-icon';
+ iconDiv.innerHTML = '<i data-lucide="check-circle" class="w-3.5 h-3.5 fill-primary-500 text-white"></i>';
+ element.appendChild(iconDiv);
+ lucide.createIcons();
+ }
+ } else {
+ element.classList.remove('border-primary-500', 'border-2');
+ element.classList.add('border-slate-200');
+ const badge = element.querySelector('.badge-icon');
+ if (badge) badge.remove();
+ }
+ });
+ }
 
-        function connectBroker(brokerName) {
-            selectedBroker = brokerName;
-            document.getElementById('linked-broker-name').innerText = brokerName;
-            document.getElementById('broker-selection-panel').classList.add('hidden');
-            document.getElementById('allocation-panel').classList.remove('hidden');
-            lucide.createIcons();
-        }
+ function connectBroker(brokerName) {
+ selectedBroker = brokerName;
+ document.getElementById('linked-broker-name').innerText = brokerName;
+ document.getElementById('broker-selection-panel').classList.add('hidden');
+ document.getElementById('allocation-panel').classList.remove('hidden');
+ lucide.createIcons();
+ }
 
-        function confirmAllocationAndContinue() {
-            switchProcessStep(3);
-        }
+ function confirmAllocationAndContinue() {
+ switchProcessStep(3);
+ }
 
-        function switchProcessStep(stepNum) {
-            if(stepNum > 1 && !document.getElementById('screen-content-0').classList.contains('hidden')) {
-                launchMockApp();
-            }
-            
-            for (let i = 1; i <= 3; i++) {
-                const ctrl = document.getElementById(`step-ctrl-${i}`);
-                const badge = document.getElementById(`step-badge-${i}`);
-                const content = document.getElementById(`screen-content-${i}`);
-                if (!ctrl) continue;
-                if (i === stepNum) {
-                    ctrl.classList.remove('border-slate-150');
-                    ctrl.classList.add('border-primary-500', 'shadow-md');
-                    badge.classList.remove('bg-slate-100', 'text-slate-500');
-                    badge.classList.add('bg-primary-600', 'text-white');
-                    content.classList.remove('hidden');
-                    document.getElementById('screen-content-0').classList.add('hidden');
-                } else {
-                    ctrl.classList.remove('border-primary-500', 'shadow-md');
-                    ctrl.classList.add('border-slate-150');
-                    badge.classList.remove('bg-primary-600', 'text-white');
-                    badge.classList.add('bg-slate-100', 'text-slate-500');
-                    content.classList.add('hidden');
-                }
-            }
-            if (stepNum === 2) {
-                document.getElementById('broker-selection-panel').classList.remove('hidden');
-                document.getElementById('allocation-panel').classList.add('hidden');
-            }
-        }
+ function switchProcessStep(stepNum) {
+ if(stepNum > 1 && !document.getElementById('screen-content-0').classList.contains('hidden')) {
+ launchMockApp();
+ }
+ 
+for (let i = 1; i <= 3; i++) {
+ const ctrl = document.getElementById(`step-ctrl-${i}`);
+ const badge = document.getElementById(`step-badge-${i}`);
+ const content = document.getElementById(`screen-content-${i}`);
+ if (!ctrl) continue;
+ if (i === stepNum) {
+ ctrl.classList.remove('border-slate-150');
+ ctrl.classList.add('border-primary-500', 'shadow-md');
+ badge.classList.remove('bg-slate-100', 'text-slate-500');
+ badge.classList.add('bg-primary-600', 'text-white');
+ content.classList.remove('hidden');
+ document.getElementById('screen-content-0').classList.add('hidden');
+ } else {
+ ctrl.classList.remove('border-primary-500', 'shadow-md');
+ ctrl.classList.add('border-slate-150');
+ badge.classList.remove('bg-primary-600', 'text-white');
+ badge.classList.add('bg-slate-100', 'text-slate-500');
+ content.classList.add('hidden');
+ }
+ }
+ if (stepNum === 2) {
+ document.getElementById('broker-selection-panel').classList.remove('hidden');
+ document.getElementById('allocation-panel').classList.add('hidden');
+ }
+ }
 
-        function triggerMockRebalance() {
-            document.getElementById('rebalance-normal-state').classList.add('hidden');
-            document.getElementById('rebalance-success-state').classList.remove('hidden');
-            lucide.createIcons();
-        }
+ function triggerMockRebalance() {
+ document.getElementById('rebalance-normal-state').classList.add('hidden');
+ document.getElementById('rebalance-success-state').classList.remove('hidden');
+ lucide.createIcons();
+ }
 
-        function resetMockRebalance() {
-            document.getElementById('rebalance-success-state').classList.add('hidden');
-            document.getElementById('rebalance-normal-state').classList.remove('hidden');
-            document.getElementById('screen-content-1').classList.add('hidden');
-            document.getElementById('screen-content-0').classList.remove('hidden');
-            switchProcessStep(1);
-        }
+ function resetMockRebalance() {
+ document.getElementById('rebalance-success-state').classList.add('hidden');
+ document.getElementById('rebalance-normal-state').classList.remove('hidden');
+ document.getElementById('screen-content-1').classList.add('hidden');
+ document.getElementById('screen-content-0').classList.remove('hidden');
+ switchProcessStep(1);
+ }
 
-        // Accessibility Zoom and High Contrast Functions
-        let currentZoom = 100;
-        function adjustTextSize(direction) {
-            if (direction === 'up' && currentZoom < 120) currentZoom += 5;
-            if (direction === 'down' && currentZoom > 90) currentZoom -= 5;
-            document.documentElement.style.fontSize = `${currentZoom}%`;
-        }
+ // Accessibility Zoom and High Contrast Functions
+ let currentZoom = 100;
+ function adjustTextSize(direction) {
+ if (direction === 'up' && currentZoom < 120) currentZoom += 5;
+ if (direction === 'down' && currentZoom > 90) currentZoom -= 5;
+ document.documentElement.style.fontSize = `${currentZoom}%`;
+ }
 
-        function toggleHighContrast() {
-            document.body.classList.toggle('high-contrast-mode');
-            accessMenu.classList.add('hidden');
-        }
+ function toggleHighContrast() {
+ document.body.classList.toggle('high-contrast-mode');
+ accessMenu.classList.add('hidden');
+ }
 
-        function changeLanguage(lang) {
-            langMenu.classList.add('hidden');
-        }
-    </script>
+ function changeLanguage(lang) {
+ langMenu.classList.add('hidden');
+ }
+ </script>
 </body>
 </html>
