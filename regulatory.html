@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Investor Information | Diraa Capital</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            850: '#064e3b',
+                            900: '#022c22'
+                        },
+                        smallcase: {
+                            500: '#1f7ae0',
+                            600: '#1a69c4'
+                        },
+                        accent: {
+                            50: '#f7fee7',
+                            100: '#ecfccb',
+                            500: '#84cc16',
+                            600: '#65a30d',
+                        },
+                        slate: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #059669; }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+        }
+
+        .dot-grid {
+            background-image: radial-gradient(#e2e8f0 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+        }
+
+        .hero-bg-card {
+            background-image: linear-gradient(to right, #ffffff 42%, rgba(255, 255, 255, 0.85) 55%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0) 100%), url('Hero image.jpg');
+            background-size: cover;
+            background-position: right center;
+            background-repeat: no-repeat;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-bg-card {
+                background-image: linear-gradient(to right, #ffffff 52%, rgba(255, 255, 255, 0.9) 70%, rgba(255, 255, 255, 0.3) 100%), url('Hero image.jpg');
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-bg-card {
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.96) 65%, rgba(255, 255, 255, 0.82) 100%), url('Hero image.jpg');
+                background-position: center right;
+            }
+        }
+
+        @keyframes successPop {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .success-animation {
+            animation: successPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        .smooth-fade {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        summary::-webkit-details-marker { display: none; }
+        summary { list-style: none; }
+
+        /* Accessibility Assist Themes */
+        .high-contrast-mode {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+        }
+        .high-contrast-mode p, 
+        .high-contrast-mode span, 
+        .high-contrast-mode li, 
+        .high-contrast-mode label,
+        .high-contrast-mode h1,
+        .high-contrast-mode h2,
+        .high-contrast-mode h3,
+        .high-contrast-mode h4,
+        .high-contrast-mode h5,
+        .high-contrast-mode h6 {
+            color: #ffffff !important;
+        }
+        .high-contrast-mode section, 
+        .high-contrast-mode nav, 
+        .high-contrast-mode footer, 
+        .high-contrast-mode div.bg-white,
+        .high-contrast-mode div.bg-slate-50,
+        .high-contrast-mode div.bg-slate-100 {
+            background-color: #111111 !important;
+            border-color: #ffffff !important;
+        }
+        .high-contrast-mode button, 
+        .high-contrast-mode a {
+            background-color: #000000 !important;
+            color: #00ff00 !important;
+            border: 2px solid #00ff00 !important;
+        }
+    
+/* =========================================================
+   DIRAA CAPITAL — MOBILE-FIRST CAMPAIGN REDESIGN
+   ========================================================= */
+:root {
+  --diraa-green:#059669;
+  --diraa-dark:#0b1720;
+  --diraa-ink:#0f172a;
+  --diraa-muted:#64748b;
+  --diraa-line:#e2e8f0;
+}
+body{overflow-x:hidden}
+#hero-section-mobile-art{display:none}
+
+@media (max-width:767px){
+  .glass-nav{background:rgba(255,255,255,.97);box-shadow:0 1px 14px rgba(15,23,42,.06)}
+  #navbar .max-w-7xl{padding-left:18px;padding-right:18px}
+  #navbar .flex.justify-between{height:68px}
+  #navbar .w-10.h-10{width:36px;height:36px;border-radius:9px;font-size:18px}
+  #navbar span.font-extrabold.text-lg{font-size:16px}
+  #navbar span.text-\[9px\]{font-size:7px;letter-spacing:.11em}
+  #mobile-menu-btn{width:42px;height:42px;border:1px solid #e2e8f0;border-radius:12px;display:flex;align-items:center;justify-content:center;background:#fff}
+  #mobile-menu{position:fixed;top:68px;left:0;right:0;z-index:49;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);border-bottom:1px solid #e2e8f0;box-shadow:0 16px 30px rgba(15,23,42,.10)}
+  #mobile-menu a{display:block;padding:15px 20px;font-size:15px;font-weight:650;color:#334155;border-bottom:1px solid #f1f5f9}
+  #mobile-menu a:last-child{border-bottom:0}
+
+  #hero-headline{font-size:clamp(2.45rem,11vw,3.35rem);line-height:.98;letter-spacing:-.045em;margin-bottom:20px}
+  #hero-headline span{display:block;margin-top:7px}
+  #hero-subtext,#hero-subtext + p{font-size:15px;line-height:1.65}
+  .hero-campaign-label{font-size:10px!important;letter-spacing:.12em!important}
+  .hero-bg-card{display:none}
+  #hero-section-mobile-art{display:block!important}
+  #hero-section-mobile-art img{width:100%;height:auto;display:block}
+
+  section.py-24{padding-top:64px;padding-bottom:64px}
+  section.py-20{padding-top:56px;padding-bottom:56px}
+  section>.max-w-7xl,section>.max-w-4xl{padding-left:20px;padding-right:20px}
+
+  #about .grid{gap:28px}
+  #about h2{font-size:31px;line-height:1.08}
+  #about .grid.grid-cols-2{gap:12px}
+  #about .grid.grid-cols-2>div{min-height:42px;padding:9px 10px;background:#fff;border:1px solid #e2e8f0;border-radius:12px}
+  #about .bg-white.p-8{padding:22px;border-radius:20px;box-shadow:0 10px 28px rgba(15,23,42,.06)}
+
+  #frameworks .text-center{margin-bottom:34px}
+  #frameworks h2{font-size:31px;line-height:1.08}
+  #frameworks .grid{display:flex;flex-direction:column;gap:14px}
+  #frameworks .grid>div{width:100%;min-height:0;padding:22px;border-radius:18px}
+  #frameworks .grid>div h3{font-size:21px}
+  #frameworks .grid>div p{font-size:14px;line-height:1.65}
+
+  #process .text-center{margin-bottom:32px}
+  #process h2{font-size:31px;line-height:1.08}
+  #process .lg\:col-span-6.flex.justify-center{margin-top:14px}
+  #process .w-\[320px\]{width:min(320px,calc(100vw - 44px));height:600px}
+
+  #analyst .bg-gradient-to-tr{border-radius:22px}
+  #analyst .grid{display:flex;flex-direction:column}
+  #analyst .analyst-photo-wrap{min-height:0!important;height:auto!important}
+  #analyst .analyst-photo-wrap>img{position:relative!important;inset:auto!important;width:100%!important;height:auto!important;object-fit:contain!important;object-position:center top!important;display:block!important}
+  #analyst .analyst-photo-wrap>.absolute.inset-0{position:absolute!important;inset:0!important}
+  #analyst .analyst-photo-wrap>.p-8{padding:20px!important}
+  #analyst .md\:col-span-3{padding:28px 22px!important}
+  #analyst .md\:col-span-3 h3{font-size:29px;line-height:1.08}
+  #analyst .space-y-5{gap:16px}
+  #analyst .space-y-5 p{font-size:14px;line-height:1.7}
+
+  #faq .text-center{margin-bottom:32px}
+  #faq h2{font-size:31px;line-height:1.08}
+  #faq .space-y-6{gap:12px}
+  #faq details{border-radius:16px;padding:17px}
+
+  #contact .grid{gap:14px}
+  #contact .lg\:col-span-5,#contact .lg\:col-span-7{padding:22px;border-radius:18px}
+
+  footer .max-w-7xl{padding:48px 20px}
+  footer .grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 18px}
+  footer .grid>div:last-child{grid-column:1/-1}
+  footer h3{font-size:26px;line-height:1.15}
+  footer .mt-12{margin-top:36px}
+  footer .text-right{text-align:left}
+
+  body>.fixed.bottom-6.left-6{display:none}
+  body>.fixed.bottom-6.right-6{right:14px;bottom:14px}
+  body>.fixed.bottom-6.right-6>button{width:40px;height:40px}
+}
+@media(max-width:390px){
+  #hero-headline{font-size:2.35rem}
+  #about .grid.grid-cols-2{grid-template-columns:1fr}
+  footer .grid{grid-template-columns:1fr}
+  footer .grid>div:last-child{grid-column:auto}
+}
+
+
+@media (max-width:767px){
+  /* Principal Analyst — preserve the source portrait ratio.
+     Never force the image to the biography column's height. */
+  #analyst .analyst-photo-wrap{
+    min-height:0!important;
+    height:auto!important;
+    display:block!important;
+    overflow:hidden!important;
+    background:#020617!important;
+  }
+  #analyst .analyst-photo-wrap>img{
+    position:relative!important;
+    inset:auto!important;
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    max-width:100%!important;
+    object-fit:initial!important;
+    object-position:initial!important;
+    transform:none!important;
+  }
+  #analyst .analyst-photo-wrap .absolute.inset-0{
+    pointer-events:none!important;
+  }
+  #analyst .analyst-photo-wrap .absolute.bottom-0{
+    bottom:0!important;
+  }
+
+  /* Strategic Patience: preserve the full essay while making it comfortable
+     to read on a phone. */
+  #strategic-patience{
+    padding-top:60px!important;
+    padding-bottom:60px!important;
+  }
+  #strategic-patience h2{
+    font-size:32px!important;
+    line-height:1.08!important;
+    letter-spacing:-.03em!important;
+  }
+  #strategic-patience .space-y-6{
+    gap:20px!important;
+  }
+  #strategic-patience .space-y-6 p{
+    font-size:16px!important;
+    line-height:1.72!important;
+  }
+  #strategic-patience .space-y-6>div{
+    margin-top:28px!important;
+  }
+}
+
+
+@media (max-width:767px){
+  #hero-section-mobile-art{
+    aspect-ratio:auto!important;
+    height:auto!important;
+    background:#f8fafc!important;
+  }
+  #hero-section-mobile-art img{
+    position:relative!important;
+    width:100%!important;
+    height:auto!important;
+    object-fit:initial!important;
+    object-position:initial!important;
+  }
+}
+
+
+@media (max-width:767px){
+  #about .grid.lg\:grid-cols-2{
+    display:flex!important;
+    flex-direction:column!important;
+    gap:44px!important;
+  }
+  #about .text-slate-600.leading-relaxed.text-sm{
+    font-size:15px!important;
+    line-height:1.72!important;
+  }
+  #about h2{
+    font-family:Georgia, "Times New Roman", serif!important;
+    font-size:31px!important;
+    line-height:1.08!important;
+  }
+  #about .grid.md\:grid-cols-2.lg\:grid-cols-3{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:16px!important;
+  }
+  /* Preserve original framework card typography and visual treatment */
+  #about .grid.md\:grid-cols-2.lg\:grid-cols-3>div{
+    padding:28px!important;
+    border-radius:16px!important;
+  }
+  #about .grid.md\:grid-cols-2.lg\:grid-cols-3 h3{
+    font-size:20px!important;
+    line-height:1.25!important;
+  }
+  #about .grid.md\:grid-cols-2.lg\:grid-cols-3 p{
+    font-size:14px!important;
+    line-height:1.65!important;
+  }
+}
+
+</style>
+<style>
+  body { overflow-x:hidden; }
+  summary { list-style:none; }
+  summary::-webkit-details-marker { display:none; }
+  .legal-anchor { scroll-margin-top: 150px; }
+  .legal-card { transition:all .2s ease; }
+  .legal-card:hover { transform:translateY(-2px); box-shadow:0 12px 28px rgba(15,23,42,.08); }
+  .legal-number { font-variant-numeric:tabular-nums; }
+  .legal-copy p { margin-bottom:1rem; }
+  .legal-copy ul { margin:0 0 1rem 1.2rem; list-style:disc; }
+  .legal-copy li { margin:.35rem 0; }
+  @media(max-width:767px){
+    #legal-hero h1{font-size:2.65rem;line-height:1.02;letter-spacing:-.04em}
+    section.legal-section{padding-top:64px;padding-bottom:64px}
+  }
+</style>
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased selection:bg-primary-500 selection:text-white">
+
+<!-- ACCESSIBILITY / LANGUAGE CONTROLS — MATCHES Diraa v7 -->
+<div class="fixed bottom-6 left-6 z-50 flex flex-col items-start gap-2 font-sans select-none">
+  <div class="hidden bg-white/95 border border-slate-200 shadow-xl rounded-xl p-2 mb-1 flex flex-col gap-1 min-w-[140px] backdrop-blur-md" id="language-menu">
+    <button class="text-left px-3 py-1.5 text-xs font-bold text-slate-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg" onclick="changeLanguage('en')">English <span class="float-right opacity-40">EN</span></button>
+    <button class="text-left px-3 py-1.5 text-xs font-bold text-slate-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg" onclick="changeLanguage('mr')">मराठी <span class="float-right opacity-40">MR</span></button>
+    <button class="text-left px-3 py-1.5 text-xs font-bold text-slate-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg" onclick="changeLanguage('hi')">हिंदी <span class="float-right opacity-40">HI</span></button>
+    <button class="text-left px-3 py-1.5 text-xs font-bold text-slate-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg" onclick="changeLanguage('ta')">தமிழ் <span class="float-right opacity-40">TA</span></button>
+    <button class="text-left px-3 py-1.5 text-xs font-bold text-slate-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg" onclick="changeLanguage('gu')">ગુજરાતી <span class="float-right opacity-40">GU</span></button>
+  </div>
+  <button class="w-11 h-11 bg-slate-900 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary-600 transition-all" id="language-toggle">
+    <i class="w-5 h-5" data-lucide="languages"></i>
+  </button>
+</div>
+
+<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2 font-sans select-none">
+  <div class="hidden bg-white/95 border border-slate-200 shadow-xl rounded-xl p-3 mb-1 flex flex-col gap-2.5 min-w-[180px] backdrop-blur-md" id="accessibility-menu">
+    <div class="text-[10px] font-black uppercase tracking-wider text-slate-400 border-b border-slate-100 pb-1">Accessibility Options</div>
+    <div class="flex items-center justify-between gap-2">
+      <span class="text-xs font-bold text-slate-600">Text Size</span>
+      <div class="flex gap-1">
+        <button class="w-7 h-7 bg-slate-100 hover:bg-slate-200 text-slate-800 font-extrabold text-xs rounded" onclick="adjustTextSize('down')">-A</button>
+        <button class="w-7 h-7 bg-slate-100 hover:bg-slate-200 text-slate-800 font-extrabold text-xs rounded" onclick="adjustTextSize('up')">+A</button>
+      </div>
+    </div>
+    <button class="w-full py-1.5 px-3 bg-slate-100 hover:bg-slate-900 hover:text-emerald-400 text-slate-800 font-bold text-xs rounded-lg flex items-center gap-2 justify-center" onclick="toggleHighContrast()">
+      <i class="w-3.5 h-3.5" data-lucide="eye"></i> High Contrast Mode
+    </button>
+  </div>
+  <button class="w-11 h-11 bg-slate-900 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary-600 transition-all" id="accessibility-toggle">
+    <i class="w-5 h-5" data-lucide="accessibility"></i>
+  </button>
+</div>
+
+<!-- NAVIGATION — MATCHES Diraa v7 -->
+<nav class="fixed w-full z-50 glass-nav border-b border-slate-100 transition-all duration-300" id="navbar">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-20 items-center">
+      <a href="/" class="flex-shrink-0 flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-tr from-primary-600 to-primary-500 rounded-lg flex items-center justify-center text-white font-black text-xl shadow-md">
+          <span class="tracking-tighter">D</span>
+        </div>
+        <div>
+          <span class="font-extrabold text-lg text-slate-900 block leading-none">Diraa Capital</span>
+          <span class="text-[9px] text-primary-600 font-bold tracking-widest uppercase mt-1.5 block">SEBI Registered Research Analyst</span>
+        </div>
+      </a>
+      <div class="hidden md:flex space-x-8 items-center">
+        <a class="text-slate-600 hover:text-primary-600 font-medium text-sm" href="/">About Us</a>
+        <a class="text-slate-600 hover:text-primary-600 font-medium text-sm" href="/#frameworks">Frameworks</a>
+        <a class="text-slate-600 hover:text-primary-600 font-medium text-sm" href="/#process">How It Works</a>
+        <a class="text-slate-600 hover:text-primary-600 font-medium text-sm" href="/#analyst">The Analyst</a>
+        <a class="text-slate-600 hover:text-primary-600 font-medium text-sm" href="/#faq">FAQs</a>
+        <a class="bg-primary-600 hover:bg-primary-700 text-white px-5 py-2.5 rounded-lg font-semibold text-sm flex items-center gap-1.5" href="https://www.smallcase.com" target="_blank" rel="noopener">
+          smallcase <i class="w-4 h-4" data-lucide="external-link"></i>
+        </a>
+      </div>
+      <div class="md:hidden">
+        <button class="text-slate-600 p-2" id="mobile-menu-btn"><i class="w-6 h-6" data-lucide="menu"></i></button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div id="mobile-menu" class="hidden md:hidden fixed top-20 left-0 right-0 z-40 bg-white border-b border-slate-200 shadow-xl">
+  <a class="block p-4 border-b border-slate-100 font-semibold" href="/">About Us</a>
+  <a class="block p-4 border-b border-slate-100 font-semibold" href="/#frameworks">Frameworks</a>
+  <a class="block p-4 border-b border-slate-100 font-semibold" href="/#process">How It Works</a>
+  <a class="block p-4 border-b border-slate-100 font-semibold" href="/#analyst">The Analyst</a>
+  <a class="block p-4 border-b border-slate-100 font-semibold" href="/#faq">FAQs</a>
+</div>
+
+<!-- HERO -->
+<section id="legal-hero" class="pt-32 pb-16 md:pt-40 md:pb-24 bg-slate-50 border-b border-slate-100 relative overflow-hidden">
+  <div class="absolute inset-0 dot-grid opacity-60 pointer-events-none"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="max-w-4xl">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary-50 border border-primary-100 text-primary-700 text-xs font-semibold mb-6 tracking-wide">
+        <span class="w-2 h-2 rounded-full bg-primary-500"></span>
+        INVESTOR INFORMATION
+      </div>
+      <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight leading-none mb-6">
+        Transparency is part of the <span class="text-primary-600 font-serif italic">process.</span>
+      </h1>
+      <p class="text-base md:text-lg text-slate-600 leading-relaxed max-w-3xl">
+        Diraa Capital provides research and research recommendations within the scope of its SEBI registration.
+        This section sets out our disclosures, investor rights, grievance mechanisms, privacy practices and terms governing our research services.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <span class="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-lg px-4 py-2.5 text-xs font-bold text-slate-700 shadow-sm">
+          <i class="w-4 h-4 text-primary-600" data-lucide="shield-check"></i> SEBI REGISTERED RESEARCH ANALYST
+        </span>
+        <span class="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-lg px-4 py-2.5 text-xs font-mono font-bold text-slate-700 shadow-sm">
+          REGISTRATION NO. [●]
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION NAV -->
+<div class="sticky top-20 z-30 bg-white/95 backdrop-blur-md border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex overflow-x-auto whitespace-nowrap">
+      <a class="px-4 py-4 text-[10px] font-black uppercase tracking-widest text-slate-500 hover:text-primary-600 border-b-2 border-transparent hover:border-primary-500" href="#disclosures">01 Disclosures</a>
+      <a class="px-4 py-4 text-[10px] font-black uppercase tracking-widest text-slate-500 hover:text-primary-600 border-b-2 border-transparent hover:border-primary-500" href="#charter">02 Investor Charter</a>
+      <a class="px-4 py-4 text-[10px] font-black uppercase tracking-widest text-slate-500 hover:text-primary-600 border-b-2 border-transparent hover:border-primary-500" href="#grievance">03 Grievances</a>
+      <a class="px-4 py-4 text-[10px] font-black uppercase tracking-widest text-slate-500 hover:text-primary-600 border-b-2 border-transparent hover:border-primary-500" href="#scores">04 SCORES</a>
+      <a class="px-4 py-4 text-[10px] font-black uppercase tracking-widest text-slate-500 hover:text-primary-600 border-b-2 border-transparent hover:border-primary-500" href="#privacy">05 Privacy</a>
+      <a class="px-4 py-4 text-[10px] font-black uppercase tracking-widest text-slate-500 hover:text-primary-600 border-b-2 border-transparent hover:border-primary-500" href="#terms">06 Terms</a>
+    </div>
+  </div>
+</div>
+
+<!-- DISCLOSURES -->
+<section id="disclosures" class="legal-section legal-anchor py-24 bg-white border-b border-slate-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-3">
+      <span class="text-primary-600 font-bold tracking-widest uppercase text-xs">01 / Disclosures</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2 font-serif leading-tight">How Diraa conducts research.</h2>
+    </div>
+    <div class="lg:col-span-9">
+      <div class="legal-copy text-slate-600 text-sm md:text-[15px] leading-relaxed">
+        <p>Diraa Capital is an independent equity research platform operated under the proprietorship of Mr. Chandrashekhar Dhone, a SEBI Registered Research Analyst, providing research and research recommendations within the scope of its registration.</p>
+        <p>Our research is developed using a systematic analytical framework that may incorporate technical, quantitative, market-structure, momentum, relative-strength, sectoral, thematic, institutional and other publicly available information, depending on the nature of the research.</p>
+      </div>
+<div class="mt-6 bg-slate-50 border border-slate-200 rounded-2xl p-6">
+  <p class="font-bold text-slate-900">Chandrashekhar Dhone</p>
+  <p class="text-sm text-slate-600 mt-1">SEBI Registered Research Analyst</p>
+  <p class="text-sm text-slate-600 mt-1">SEBI Registration No. <strong>[●]</strong></p>
+  <p class="text-sm text-slate-600 mt-1">Trade Name: <strong>Diraa Capital</strong></p>
+</div>
+      <div class="grid md:grid-cols-2 gap-5 mt-8">
+        <div class="legal-card bg-slate-50 border border-slate-200 rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center mb-4"><i data-lucide="layers"></i></div>
+          <h3 class="font-extrabold text-slate-900 mb-2">Nature of Research</h3>
+          <p class="text-sm text-slate-600">Diraa's research is primarily focused on identifying and evaluating market opportunities through a systematic framework built around <strong class="text-slate-900">process, momentum and structure</strong>.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-full text-[9px] font-bold text-slate-500">SECURITIES</span>
+            <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-full text-[9px] font-bold text-slate-500">SECTORS</span>
+            <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-full text-[9px] font-bold text-slate-500">THEMES</span>
+            <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-full text-[9px] font-bold text-slate-500">SIGNALS</span>
+            <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-full text-[9px] font-bold text-slate-500">MODEL PORTFOLIOS</span>
+          </div>
+        </div>
+        <div class="legal-card bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center mb-4"><i data-lucide="line-chart"></i></div>
+          <h3 class="font-extrabold text-slate-900 mb-2">Research Recommendations</h3>
+          <p class="text-sm text-slate-600">A Diraa research recommendation represents the Research Analyst's view based on information and analysis available at the time of the recommendation.</p>
+          <p class="text-sm text-slate-600 mt-3">A recommendation may subsequently be revised, maintained, reduced, withdrawn or closed when the underlying research conditions change.</p>
+        </div>
+        <div class="legal-card bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center mb-4"><i data-lucide="monitor-smartphone"></i></div>
+          <h3 class="font-extrabold text-slate-900 mb-2">Smallcase & Technology Platforms</h3>
+          <p class="text-sm text-slate-600">Diraa may distribute or make certain research products and model portfolios available through third-party technology platforms, including Smallcase. Such platforms may facilitate subscription, portfolio presentation and implementation.</p>
+          <p class="text-sm text-slate-600 mt-3">The underlying research and recommendation remain those of Diraa Capital. The use of a technology platform does not constitute discretionary portfolio management by Diraa.</p>
+        </div>
+        <div class="legal-card bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center mb-4"><i data-lucide="user-check"></i></div>
+          <h3 class="font-extrabold text-slate-900 mb-2">Investor Responsibility</h3>
+          <p class="text-sm text-slate-600">Investors are responsible for independently evaluating research recommendations, considering their own circumstances and risk tolerance, and deciding whether, when and how to act.</p>
+          <p class="text-sm text-slate-600 mt-3">Diraa does not take custody of investor funds or securities and does not execute trades on behalf of investors.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-gradient-to-tr from-primary-900 to-primary-850 rounded-3xl p-8 md:p-10 text-white">
+        <span class="text-primary-300 font-bold uppercase tracking-widest text-[10px]">Investor autonomy</span>
+        <h3 class="text-3xl md:text-5xl font-extrabold tracking-tight mt-3 leading-tight">Diraa provides research.<br><span class="font-serif italic text-primary-300">The investor makes the investment decision.</span></h3>
+      </div>
+
+      <div class="mt-6 bg-primary-50 border border-primary-100 rounded-2xl p-6">
+        <div class="flex gap-4">
+          <i class="w-6 h-6 text-primary-600 shrink-0 mt-1" data-lucide="triangle-alert"></i>
+          <div>
+            <h3 class="font-extrabold text-primary-900">IMPORTANT RISK DISCLOSURE</h3>
+            <p class="text-sm text-slate-600 mt-2">Investment in securities is subject to market risks. There can be no assurance that any research recommendation, security, strategy or model portfolio will achieve its intended objective or generate profits.</p>
+            <p class="text-sm text-slate-600 mt-2"><strong class="text-slate-900">Diraa does not guarantee or assure any return.</strong></p>
+            <p class="text-xs text-slate-500 mt-3">Registration granted by SEBI and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-5 mt-6">
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+          <h3 class="font-extrabold text-slate-900 mb-2">Conflicts of Interest</h3>
+          <p class="text-sm text-slate-600">Diraa maintains policies and procedures for identifying, managing and disclosing material conflicts of interest arising in connection with its research activities.</p>
+          <p class="text-sm text-slate-600 mt-3">Where applicable, disclosures relating to financial interests, holdings, relationships, compensation or other material conflicts shall be made in accordance with applicable regulatory requirements.</p>
+        </div>
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+          <h3 class="font-extrabold text-slate-900 mb-2">Artificial Intelligence</h3>
+          <p class="text-sm text-slate-600">Where Artificial Intelligence tools are used in providing research services, Diraa shall disclose the extent of such use in accordance with applicable SEBI requirements.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- INVESTOR CHARTER -->
+<section id="charter" class="legal-section legal-anchor py-24 bg-slate-50 border-b border-slate-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-3">
+      <span class="text-primary-600 font-bold tracking-widest uppercase text-xs">02 / Investor Charter</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2 font-serif leading-tight">Your rights.<br>Your responsibilities.</h2>
+    </div>
+    <div class="lg:col-span-9">
+      <div class="grid md:grid-cols-3 bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+        <div class="p-5 border-b md:border-r border-slate-200"><span class="text-[9px] uppercase tracking-widest font-black text-slate-400">Registered Name</span><div class="font-bold text-sm mt-1">Chandrashekhar Dhone</div></div>
+        <div class="p-5 border-b md:border-r border-slate-200"><span class="text-[9px] uppercase tracking-widest font-black text-slate-400">SEBI Registration No.</span><div class="font-bold text-sm mt-1">[●]</div></div>
+        <div class="p-5 border-b border-slate-200"><span class="text-[9px] uppercase tracking-widest font-black text-slate-400">RAASB</span><div class="font-bold text-sm mt-1">[●]</div></div>
+        <div class="p-5 md:border-r border-slate-200"><span class="text-[9px] uppercase tracking-widest font-black text-slate-400">Registered Address</span><div class="font-bold text-sm mt-1">[●]</div></div>
+        <div class="p-5 md:border-r border-slate-200"><span class="text-[9px] uppercase tracking-widest font-black text-slate-400">Email</span><div class="font-bold text-sm mt-1">[●]</div></div>
+        <div class="p-5"><span class="text-[9px] uppercase tracking-widest font-black text-slate-400">Telephone</span><div class="font-bold text-sm mt-1">[●]</div></div>
+      </div>
+
+      <div class="mt-8 bg-white rounded-3xl border border-slate-200 p-8 md:p-10 shadow-sm">
+        <span class="text-primary-600 font-bold uppercase tracking-widest text-[10px]">Vision</span>
+        <h3 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-3 font-serif">Invest with knowledge &amp; safety.</h3>
+        <div class="mt-8 pt-6 border-t border-slate-100">
+          <span class="text-primary-600 font-bold uppercase tracking-widest text-[10px]">Mission</span>
+          <p class="text-sm md:text-base text-slate-600 leading-relaxed mt-3">Every investor should be able to invest in right investment products based on their needs, manage and monitor them to meet their goals, access reports and enjoy financial wellness.</p>
+          <p class="text-xs text-slate-400 mt-3">The above Vision and Mission form part of the Investor Charter prescribed by SEBI for Research Analysts.</p>
+        </div>
+      </div>
+
+      <div class="mt-10">
+        <h3 class="text-xl font-extrabold text-slate-900 mb-4">Diraa Capital's Research Role</h3>
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 text-sm text-slate-600 leading-relaxed">
+          <p>Diraa Capital, operated under the proprietorship of Mr. Chandrashekhar Dhone, a SEBI Registered Research Analyst, provides independent research and research recommendations within the scope of its registration.</p>
+          <p class="mt-3">Our research may include technical and quantitative analysis, momentum, relative strength, market structure, price and volume behaviour, sectoral and thematic analysis and other relevant research inputs.</p>
+          <p class="mt-3">Where applicable, Diraa may provide <strong class="text-slate-900">model portfolios</strong>, including through third-party technology platforms such as Smallcase.</p>
+          <p class="mt-3">A Diraa model portfolio is a <strong class="text-slate-900">research recommendation</strong> and does not constitute discretionary management of the investor's portfolio.</p>
+        </div>
+      </div>
+
+      <div class="mt-10">
+        <h3 class="text-xl font-extrabold text-slate-900 mb-4">Investor Rights</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <div class="bg-white border border-slate-200 rounded-xl p-4"><span class="text-primary-600 font-black text-[10px] legal-number">01</span><p class="text-sm font-bold text-slate-800 mt-1">Privacy and confidentiality</p></div><div class="bg-white border border-slate-200 rounded-xl p-4"><span class="text-primary-600 font-black text-[10px] legal-number">02</span><p class="text-sm font-bold text-slate-800 mt-1">Transparent practices</p></div><div class="bg-white border border-slate-200 rounded-xl p-4"><span class="text-primary-600 font-black text-[10px] legal-number">03</span><p class="text-sm font-bold text-slate-800 mt-1">Fair and equitable treatment</p></div><div class="bg-white border border-slate-200 rounded-xl p-4"><span class="text-primary-600 font-black text-[10px] legal-number">04</span><p class="text-sm font-bold text-slate-800 mt-1">Adequate information</p></div><div class="bg-white border border-slate-200 rounded-xl p-4"><span class="text-primary-600 font-black text-[10px] legal-number">05</span><p class="text-sm font-bold text-slate-800 mt-1">Initial and continuing disclosures</p></div><div class="bg-white border border-slate-200 rounded-xl p-4"><span class="text-primary-600 font-black text-[10px] legal-number">06</span><p class="text-sm font-bold text-slate-800 mt-1">Information regarding applicable service parameters and timelines</p></div><div class="bg-white border border-slate-200 rounded-xl p-4"><span class="text-primary-600 font-black text-[10px] legal-number">07</span><p class="text-sm font-bold text-slate-800 mt-1">Fair and true communication</p></div><div class="bg-white border border-slate-200 rounded-xl p-4"><span class="text-primary-600 font-black text-[10px] legal-number">08</span><p class="text-sm font-bold text-slate-800 mt-1">Be heard and receive grievance redressal</p></div><div class="bg-white border border-slate-200 rounded-xl p-4"><span class="text-primary-600 font-black text-[10px] legal-number">09</span><p class="text-sm font-bold text-slate-800 mt-1">Timely resolution of grievances</p></div><div class="bg-white border border-slate-200 rounded-xl p-4"><span class="text-primary-600 font-black text-[10px] legal-number">10</span><p class="text-sm font-bold text-slate-800 mt-1">Exit from research services</p></div><div class="bg-white border border-slate-200 rounded-xl p-4"><span class="text-primary-600 font-black text-[10px] legal-number">11</span><p class="text-sm font-bold text-slate-800 mt-1">Appropriate caution regarding complex or high-risk financial products</p></div><div class="bg-white border border-slate-200 rounded-xl p-4"><span class="text-primary-600 font-black text-[10px] legal-number">12</span><p class="text-sm font-bold text-slate-800 mt-1">Suitable access to services for persons with disabilities</p></div><div class="bg-white border border-slate-200 rounded-xl p-4"><span class="text-primary-600 font-black text-[10px] legal-number">13</span><p class="text-sm font-bold text-slate-800 mt-1">Provide feedback</p></div><div class="bg-white border border-slate-200 rounded-xl p-4"><span class="text-primary-600 font-black text-[10px] legal-number">14</span><p class="text-sm font-bold text-slate-800 mt-1">Protection against coercive, unfair or one-sided contractual provisions</p></div>
+        </div>
+      </div>
+
+      <div class="mt-10">
+        <h3 class="text-xl font-extrabold text-slate-900 mb-4">Investor Responsibilities</h3>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div class="bg-white border border-slate-200 rounded-xl p-4 text-sm font-semibold text-slate-700"><span class="text-primary-600 mr-2">✓</span>Verify Diraa's SEBI registration</div><div class="bg-white border border-slate-200 rounded-xl p-4 text-sm font-semibold text-slate-700"><span class="text-primary-600 mr-2">✓</span>Read research reports, recommendations and disclosures carefully</div><div class="bg-white border border-slate-200 rounded-xl p-4 text-sm font-semibold text-slate-700"><span class="text-primary-600 mr-2">✓</span>Understand the risks associated with investments</div><div class="bg-white border border-slate-200 rounded-xl p-4 text-sm font-semibold text-slate-700"><span class="text-primary-600 mr-2">✓</span>Ask questions and seek clarification where necessary</div><div class="bg-white border border-slate-200 rounded-xl p-4 text-sm font-semibold text-slate-700"><span class="text-primary-600 mr-2">✓</span>Independently evaluate recommendations before acting</div><div class="bg-white border border-slate-200 rounded-xl p-4 text-sm font-semibold text-slate-700"><span class="text-primary-600 mr-2">✓</span>Pay research fees only through permitted channels</div><div class="bg-white border border-slate-200 rounded-xl p-4 text-sm font-semibold text-slate-700"><span class="text-primary-600 mr-2">✓</span>Never provide funds to Diraa for investment</div><div class="bg-white border border-slate-200 rounded-xl p-4 text-sm font-semibold text-slate-700"><span class="text-primary-600 mr-2">✓</span>Never provide trading, demat or bank-account credentials, passwords or OTPs</div><div class="bg-white border border-slate-200 rounded-xl p-4 text-sm font-semibold text-slate-700"><span class="text-primary-600 mr-2">✓</span>Do not rely on rumours or promises of assured returns</div><div class="bg-white border border-slate-200 rounded-xl p-4 text-sm font-semibold text-slate-700"><span class="text-primary-600 mr-2">✓</span>Remain responsible for your own investment decisions</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- GRIEVANCE -->
+<section id="grievance" class="legal-section legal-anchor py-24 bg-white border-b border-slate-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-3"><span class="text-primary-600 font-bold tracking-widest uppercase text-xs">03 / Grievance Redressal</span><h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2 font-serif leading-tight">If something isn't right, we want to hear about it.</h2></div>
+    <div class="lg:col-span-9">
+      <p class="text-sm md:text-base text-slate-600 leading-relaxed max-w-3xl">Diraa Capital, operated under the proprietorship of Mr. Chandrashekhar Dhone, a SEBI Registered Research Analyst, is committed to handling investor grievances fairly, transparently and within the applicable regulatory framework. We encourage investors to first contact Diraa directly so that the matter can be reviewed and resolved.</p>
+      <div class="grid md:grid-cols-3 gap-4 mt-8">
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6"><span class="text-primary-600 text-xs font-black">01</span><h3 class="font-extrabold text-slate-900 mt-3">Contact Diraa</h3><p class="text-sm text-slate-500 mt-2">Approach Diraa through the grievance mechanism provided on this website.</p></div>
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6"><span class="text-primary-600 text-xs font-black">02</span><h3 class="font-extrabold text-slate-900 mt-3">We review</h3><p class="text-sm text-slate-500 mt-2">Provide relevant service details, grievance, dates and supporting documents where applicable.</p></div>
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6"><span class="text-primary-600 text-xs font-black">03</span><h3 class="font-extrabold text-slate-900 mt-3">Escalate if required</h3><p class="text-sm text-slate-500 mt-2">If dissatisfied, you may escalate through SEBI SCORES and, where applicable, ODR.</p></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-5 mt-6">
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm"><h3 class="font-extrabold text-slate-900">Grievance Officer</h3><div class="mt-4 space-y-2 text-sm text-slate-600"><p><strong>Name:</strong> [●]</p><p><strong>Designation:</strong> [●]</p><p><strong>Email:</strong> [●]</p><p><strong>Telephone:</strong> [●]</p></div></div>
+        <div class="bg-primary-50 border border-primary-100 rounded-2xl p-6"><h3 class="font-extrabold text-primary-900">Resolution Timeline</h3><p class="text-sm text-slate-600 mt-3">Diraa shall endeavour to resolve investor grievances within the applicable regulatory timeline.</p><p class="text-sm text-slate-600 mt-3"><strong class="text-primary-700">21 days</strong> — Under the current Investor Charter, an RA is required to strive to redress a grievance immediately and not later than 21 days from receipt of the grievance.</p></div>
+      </div>
+      <div class="mt-6 bg-slate-900 text-white rounded-2xl p-6"><p class="text-sm text-slate-300">If you remain dissatisfied with the resolution provided by Diraa, you may escalate the grievance through <strong class="text-white">SEBI SCORES</strong>. You may also use the applicable <strong class="text-white">Online Dispute Resolution (ODR)</strong> mechanism where available.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- SCORES -->
+<section id="scores" class="legal-section legal-anchor py-24 bg-slate-50 border-b border-slate-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-3"><span class="text-primary-600 font-bold tracking-widest uppercase text-xs">04 / SEBI SCORES</span><h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2 font-serif leading-tight">Independent grievance escalation.</h2></div>
+    <div class="lg:col-span-9">
+      <div class="bg-white border border-slate-200 rounded-3xl p-8 md:p-10 shadow-sm">
+        <div class="flex items-start gap-5">
+          <div class="w-12 h-12 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center shrink-0"><i data-lucide="landmark"></i></div>
+          <div><h3 class="text-xl font-extrabold text-slate-900">SCORES 2.0</h3><p class="text-sm text-slate-600 mt-2">If your grievance remains unresolved or you are dissatisfied with the resolution provided by Diraa Capital, you may approach SEBI through SCORES 2.0.</p><p class="text-sm text-slate-600 mt-3">SCORES is SEBI's centralized online grievance-redressal system.</p></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4 mt-7">
+          <div class="bg-slate-50 rounded-xl p-4"><span class="text-primary-600 text-[10px] font-black uppercase tracking-widest">Level 1</span><p class="font-bold text-slate-800 mt-1">Review by the designated RAASB</p></div>
+          <div class="bg-slate-50 rounded-xl p-4"><span class="text-primary-600 text-[10px] font-black uppercase tracking-widest">Level 2</span><p class="font-bold text-slate-800 mt-1">Review by SEBI</p></div>
+        </div>
+        <a href="https://scores.sebi.gov.in/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold text-sm mt-7">Visit SEBI SCORES <i data-lucide="external-link" class="w-4 h-4"></i></a>
+      </div>
+      <div class="bg-white border border-slate-200 rounded-3xl p-8 md:p-10 shadow-sm mt-5">
+        <h3 class="text-xl font-extrabold text-slate-900">Online Dispute Resolution</h3>
+        <p class="text-sm text-slate-600 mt-2">Where applicable, investors may also use the SMART ODR platform for online conciliation or arbitration. The applicable ODR process is separate from Diraa's internal grievance mechanism.</p>
+        <a href="https://smartodr.in/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold text-sm mt-6">Visit SMART ODR <i data-lucide="external-link" class="w-4 h-4"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- PRIVACY -->
+<section id="privacy" class="legal-section legal-anchor py-24 bg-white border-b border-slate-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-3"><span class="text-primary-600 font-bold tracking-widest uppercase text-xs">05 / Privacy</span><h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2 font-serif leading-tight">Your information stays your information.</h2><p class="text-xs text-slate-400 mt-5">Effective Date: [●]<br>Last Updated: [●]</p></div>
+    <div class="lg:col-span-9">
+      <p class="text-sm md:text-base text-slate-600 leading-relaxed max-w-3xl mb-8">Diraa Capital respects the privacy and confidentiality of information entrusted to us. This Privacy Policy explains how Diraa Capital collects, uses, stores, protects and otherwise processes personal information in connection with our website and research services.</p>
+      <div class="border-t border-slate-200">
+        <details class="group border-b border-slate-200" open><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>01 — Information We Collect</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>Depending on the nature of your interaction with Diraa, we may collect name, email address, mobile number, communication address, PAN and KYC information where required; subscription information; research-service details; client requests; correspondence; communications relating to research services; and information necessary to administer your relationship with Diraa.</p><p class="mt-3">We may maintain information necessary to administer research-service fees, invoices and payment status. Diraa does <strong>not</strong> require your trading, demat or bank-account passwords or OTPs.</p></div></details>
+        <details class="group border-b border-slate-200"><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>02 — Information Processed Through Third-Party Platforms</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>Diraa may use third-party platforms to provide or facilitate aspects of its research services. Where a service is accessed through Smallcase or another third-party platform, information may be collected and processed directly by that platform under its own privacy policy and terms.</p><p class="mt-3">Diraa will process information received from or through such platforms only for purposes connected with the research service, client administration, compliance, regulatory obligations and other legitimate purposes.</p></div></details>
+        <details class="group border-b border-slate-200"><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>03 — How We Use Personal Information</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><ul class="list-disc ml-5 space-y-1"><li>Provide and administer research services</li><li>Manage subscriptions</li><li>Communicate research and service-related information</li><li>Complete required onboarding and KYC processes</li><li>Maintain regulatory and compliance records</li><li>Respond to grievances</li><li>Maintain records of relevant client communications</li><li>Prevent fraud or unauthorized activity</li><li>Maintain information security</li><li>Meet legal and regulatory obligations</li><li>Improve our services</li></ul></div></details>
+        <details class="group border-b border-slate-200"><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>04 — Confidentiality</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>Diraa will maintain confidentiality of information provided by clients, except where disclosure is required by law or regulation; required by SEBI, RAASB, a court or competent authority; necessary to discharge a legal obligation; necessary for an authorized service provider to provide the contracted service; or authorized by the client.</p></div></details>
+        <details class="group border-b border-slate-200"><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>05 — Service Providers</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>Diraa may engage third-party service providers for hosting and technology, payment processing, KYC and onboarding, e-signature, communications, compliance, analytics and other operational functions. Such providers will receive information only to the extent necessary for the relevant service or legal obligation.</p></div></details>
+        <details class="group border-b border-slate-200"><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>06 — Retention</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>Diraa may retain information for as long as required to provide the relevant service, satisfy regulatory requirements, comply with applicable law, maintain required records, resolve disputes or protect legitimate legal and compliance interests.</p></div></details>
+        <details class="group border-b border-slate-200"><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>07 — Security</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>Diraa maintains reasonable technical and organizational safeguards intended to protect personal information against unauthorized access, misuse, alteration, loss or disclosure. No electronic transmission or storage system can, however, be guaranteed to be completely secure.</p></div></details>
+        <details class="group border-b border-slate-200"><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>08 — Privacy Requests</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p><strong>Privacy Contact:</strong> [●]</p><p class="mt-2"><strong>Email:</strong> [●]</p><p class="mt-2">Requests will be handled subject to applicable law and regulatory record-retention requirements.</p></div></details>
+        <details class="group border-b border-slate-200"><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>09 — Changes to This Policy</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>This Privacy Policy may be updated from time to time to reflect changes in applicable law, regulatory requirements, Diraa's services, technology or operational practices. The latest version will be published on this page.</p></div></details>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- TERMS -->
+<section id="terms" class="legal-section legal-anchor py-24 bg-slate-50 border-b border-slate-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-3"><span class="text-primary-600 font-bold tracking-widest uppercase text-xs">06 / Terms of Service</span><h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2 font-serif leading-tight">The framework governing our relationship with you.</h2><p class="text-xs text-slate-400 mt-5">Effective Date: [●]<br>Last Updated: [●]</p></div>
+    <div class="lg:col-span-9">
+      <p class="text-sm md:text-base text-slate-600 leading-relaxed max-w-3xl mb-8">These Terms of Service govern your access to the Diraa Capital website and use of services provided by Chandrashekhar Dhone under the trade name Diraa Capital. Where a separate Research Services Agreement, Terms &amp; Conditions, MITC, subscription agreement or product-specific terms apply, those documents form part of the applicable contractual relationship.</p>
+      <div class="border-t border-slate-200">
+        <details class="group border-b border-slate-200" open><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>01 — Diraa's Services</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>Diraa Capital provides research services within the scope of its SEBI registration. Research may include technical and quantitative analysis, momentum and relative-strength analysis, market-structure analysis, price and volume analysis, order-flow analysis, sectoral and thematic analysis, institutional and ownership information, publicly available company and financial information, and other research inputs considered relevant to the applicable methodology.</p></div></details><details class="group border-b border-slate-200" ><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>02 — Research Recommendations</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>A research recommendation represents Diraa's research view based on information and analysis available at the relevant time. Recommendations may be revised, maintained, reduced, withdrawn or closed as research conditions change.</p><p class='mt-3'><strong>A research recommendation is not a guarantee of performance or outcome.</strong></p></div></details><details class="group border-b border-slate-200" ><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>03 — Model Portfolios</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>Where Diraa provides a defined basket of securities with applicable weightages, investment horizon and rebalancing framework, the service may constitute a model portfolio under the applicable SEBI framework. Such model portfolios are research services and are not discretionary portfolio management.</p></div></details><details class="group border-b border-slate-200" ><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>04 — Smallcase and Third-Party Platforms</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>Diraa may make certain research products and model portfolios available through third-party technology platforms such as Smallcase. The relevant platform may provide functionality for subscription, portfolio presentation and implementation. The platform's own terms, privacy policy and applicable charges may separately apply.</p><p class='mt-3'>Diraa remains responsible for the research it provides within the scope of its SEBI registration.</p></div></details><details class="group border-b border-slate-200" ><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>05 — Investor Autonomy</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p><strong>Diraa provides research. The investor makes the investment decision.</strong></p><p class='mt-3'>The investor remains responsible for deciding whether to act on a recommendation, when to act, how much to invest, and whether to continue or discontinue an investment. Diraa does not make investment decisions on behalf of the investor.</p></div></details><details class="group border-b border-slate-200" ><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>06 — No Discretionary Management or Execution</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>Diraa does not receive or hold investor funds for investment, take custody of investor securities, operate investor bank accounts, operate investor trading or demat accounts, request trading, demat or banking passwords, request OTPs, or execute trades on behalf of investors.</p></div></details><details class="group border-b border-slate-200" ><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>07 — No Assurance of Returns</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>Diraa does not guarantee or assure profits, returns, achievement of a target price, preservation of capital, achievement of an investment objective, or future performance of any security, strategy or model portfolio.</p><p class='mt-3'><strong>Registration granted by SEBI and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors.</strong></p></div></details><details class="group border-b border-slate-200" ><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>08 — Fees</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>Applicable research-service fees will be disclosed before subscription and will be governed by the applicable research-service terms. Fees, refunds and termination provisions may differ according to the nature of the client and service and shall comply with applicable SEBI requirements. The applicable research-service terms and consent process shall prevail for the subscribed service.</p></div></details><details class="group border-b border-slate-200" ><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>09 — Conflicts of Interest</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>Diraa maintains policies to identify, manage and disclose material conflicts of interest. Where a conflict is material to a research recommendation, the relevant disclosure shall be made in accordance with applicable requirements.</p></div></details><details class="group border-b border-slate-200" ><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>10 — Client Communications</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>Diraa may maintain records of interactions and communications relating to research services, including communications with prospective clients before onboarding. Such records may include written, electronic and other legally verifiable communications, subject to applicable law.</p></div></details><details class="group border-b border-slate-200" ><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>11 — Communication Channels</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>Research may be communicated through the channels specified for the relevant research service. Diraa may introduce additional communication channels where appropriate and subject to applicable regulatory requirements. A private messaging group or communication channel does not, by itself, create a separate research service or authorize the distribution of recommendations outside the applicable service terms.</p></div></details><details class="group border-b border-slate-200" ><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>12 — Intellectual Property</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>Research, reports, methodologies, frameworks, analytical systems, written materials, charts, software and other materials provided by Diraa remain subject to applicable intellectual-property rights. Unless expressly permitted, clients may not reproduce, commercially redistribute, resell or systematically republish Diraa research.</p></div></details><details class="group border-b border-slate-200" ><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>13 — Termination</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>A research service may be terminated in accordance with the applicable research-service terms. Where regulatory requirements prescribe specific consequences for suspension or cancellation of registration, the applicable regulatory provisions shall apply.</p></div></details><details class="group border-b border-slate-200" ><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>14 — Grievance Redressal</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>Investors should first contact Diraa through its grievance-redressal mechanism. If dissatisfied with the resolution, investors may approach SEBI through SCORES and, where applicable, the ODR mechanism.</p></div></details><details class="group border-b border-slate-200" ><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>15 — Changes to These Terms</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>Diraa may update these Terms to reflect changes in applicable law or regulation, SEBI or RAASB requirements, services, technology or operational practices. Where a change affects contractual research-service terms, the applicable notice and consent requirements shall be followed.</p></div></details><details class="group border-b border-slate-200" ><summary class="flex justify-between items-center py-5 font-extrabold text-slate-900 cursor-pointer"><span>16 — Regulatory Framework</span><span class="text-primary-600 text-xl group-open:rotate-45 transition-transform">+</span></summary><div class="pb-6 text-sm text-slate-600 leading-relaxed"><p>These Terms are subject to applicable Indian law and the regulations, circulars and directions applicable to Diraa's research services. Where a provision of these Terms conflicts with a mandatory regulatory requirement, the applicable regulatory requirement shall prevail.</p></div></details>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER — Diraa v7 style -->
+<footer class="bg-slate-950 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid md:grid-cols-4 gap-10">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-gradient-to-tr from-primary-600 to-primary-500 rounded-lg flex items-center justify-center text-white font-black text-xl">D</div>
+          <div><div class="font-extrabold text-lg">Diraa Capital</div><div class="text-[9px] text-primary-400 font-bold tracking-widest uppercase mt-1">SEBI Registered Research Analyst</div></div>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed mt-5 max-w-md">Systematic Market Participation Built Around <span class="text-primary-400">Process, Momentum &amp; Structure.</span></p>
+      </div>
+      <div>
+        <h4 class="text-[10px] uppercase tracking-widest font-black text-primary-400 mb-4">Investor Information</h4>
+        <a class="block text-sm text-slate-400 hover:text-white mb-2" href="#disclosures">Disclosures</a>
+        <a class="block text-sm text-slate-400 hover:text-white mb-2" href="#charter">Investor Charter</a>
+        <a class="block text-sm text-slate-400 hover:text-white mb-2" href="#grievance">Grievance Redressal</a>
+        <a class="block text-sm text-slate-400 hover:text-white mb-2" href="#scores">SCORES</a>
+      </div>
+      <div>
+        <h4 class="text-[10px] uppercase tracking-widest font-black text-primary-400 mb-4">Policies</h4>
+        <a class="block text-sm text-slate-400 hover:text-white mb-2" href="#privacy">Privacy Policy</a>
+        <a class="block text-sm text-slate-400 hover:text-white mb-2" href="#terms">Terms of Service</a>
+        <a class="block text-sm text-slate-400 hover:text-white mb-2" href="/">Diraa Capital</a>
+      </div>
+    </div>
+    <div class="border-t border-slate-800 mt-12 pt-6 text-xs text-slate-500 leading-relaxed">
+      Diraa Capital is a SEBI Registered Research Analyst. Registration and certification do not guarantee performance or returns. Investments in securities are subject to market risks.
+    </div>
+  </div>
+</footer>
+
+<script>
+lucide.createIcons();
+
+const mobileBtn=document.getElementById('mobile-menu-btn');
+const mobileMenu=document.getElementById('mobile-menu');
+if(mobileBtn) mobileBtn.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
+
+const langToggle=document.getElementById('language-toggle');
+const langMenu=document.getElementById('language-menu');
+if(langToggle) langToggle.addEventListener('click',()=>langMenu.classList.toggle('hidden'));
+
+const accessToggle=document.getElementById('accessibility-toggle');
+const accessMenu=document.getElementById('accessibility-menu');
+if(accessToggle) accessToggle.addEventListener('click',()=>accessMenu.classList.toggle('hidden'));
+
+let currentZoom=100;
+function adjustTextSize(direction){
+  if(direction==='up' && currentZoom<120) currentZoom+=5;
+  if(direction==='down' && currentZoom>90) currentZoom-=5;
+  document.documentElement.style.fontSize=`${currentZoom}%`;
+}
+function toggleHighContrast(){document.body.classList.toggle('high-contrast-mode');accessMenu.classList.add('hidden');}
+function changeLanguage(lang){langMenu.classList.add('hidden');}
+</script>
+</body>
+</html>
