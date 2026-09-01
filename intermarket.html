@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0b5f4a">
-<meta name="description" content="Diraa Capital Intermarket Tracker — Progressive Learning & Master Reference Framework">
-<title>Intermarket Tracker | Diraa Capital</title>
+<meta name="description" content="Diraa Capital Intermarket Playbook — Global + India Market Transmission Framework">
+<title>Intermarket Playbook | Diraa Capital</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -532,6 +532,23 @@ footer{background:#172534;color:white;padding:40px 0 24px}
   .cards, .anchor-grid { grid-template-columns: 1fr; }
   .hero-card { padding: 18px; }
 }
+
+/* v1.1 Playbook visual upgrades */
+.commodity-map{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 28px}
+.commodity-card{border:1px solid var(--line);padding:20px;background:var(--panel);position:relative;overflow:hidden}
+.commodity-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--g)}
+.commodity-card.metals:before{background:var(--blue)}
+.commodity-card.agro:before{background:var(--amber)}
+.commodity-kicker{font:11px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mut)}
+.commodity-card h3{margin:8px 0 6px;font-family:'Playfair Display',Georgia,serif;font-size:22px}
+.commodity-card p{margin:0 0 15px;color:var(--mut);line-height:1.6}
+.commodity-tags{display:flex;flex-wrap:wrap;gap:6px}
+.commodity-tags span{font:11px 'IBM Plex Mono';padding:5px 7px;border:1px solid var(--line);background:var(--panel-2)}
+.yen-callout{margin:18px 0}.yen-flow{margin:14px 0}
+.commodity-transmission{margin:24px 0;padding:18px;border:1px solid var(--line);background:var(--panel-2)}
+.transmission-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:15px}.transmission-head strong{font-family:'Playfair Display',Georgia,serif;font-size:20px}
+.transmission-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.transmission-grid>div{padding:13px;border:1px solid var(--line);background:var(--panel)}.transmission-grid b{display:block;font:11px 'IBM Plex Mono';margin-bottom:7px}.transmission-grid span{font-size:13px;line-height:1.5;color:var(--mut)}
+@media(max-width:800px){.commodity-map,.transmission-grid{grid-template-columns:1fr}.transmission-head{display:block}.transmission-head strong{display:block;margin-top:5px}}
 </style>
 </head>
 <body>
@@ -583,12 +600,12 @@ footer{background:#172534;color:white;padding:40px 0 24px}
   <a href="#cheat"><span class="idx">?</span> Cheat Sheet</a>
 </div>
 
-<!-- Learner Mode Progress Tracker Header -->
+<!-- Learner Mode Progress Header -->
 <div class="wrap">
   <div class="learner-dashboard-header" id="learnerHeader">
     <span class="eyebrow">Curriculum Chapter Mode</span>
     <h2 style="margin:5px 0 5px; font-family:'Playfair Display',Georgia,serif;">Interactive Chapter Reader</h2>
-    <p class="intro" id="progressText">Completed 0 of 13 Chapters (0%) — Click any chapter header to expand/collapse or mark complete.</p>
+    <p class="intro" id="progressText">Completed 0 of 13 Chapters (0%) — Read the market forces, follow the transmission chains, then use the operating layer.</p>
     <div class="progress-bar-wrap">
       <div class="progress-bar-fill" id="progressBar"></div>
     </div>
@@ -625,10 +642,10 @@ footer{background:#172534;color:white;padding:40px 0 24px}
         <div class="wrap hero-grid">
           <div>
             <span class="eyebrow">Diraa Capital · Master Reference</span>
-            <h1>Intermarket<br>Tracker</h1>
-            <p class="lede">Capital Markets: 8-Segment Analysis Framework. A structured way to read how rates, the dollar, credit, volatility, commodities, flows and equities transmit into India.</p>
+            <h1>Intermarket<br>Playbook</h1>
+            <p class="lede">Capital Markets: 8-Market-Force Analysis Framework. A structured way to read how rates, the dollar, credit, volatility, commodities, flows and equities transmit into India.</p>
             <div class="pills">
-              <span class="pill">8 SEGMENTS</span>
+              <span class="pill">8 MARKET FORCES</span>
               <span class="pill">GLOBAL + INDIA</span>
               <span class="pill">DAILY → MONTHLY</span>
               <span class="pill">REFERENCE v1.0</span>
@@ -653,7 +670,7 @@ footer{background:#172534;color:white;padding:40px 0 24px}
           <div class="section-head">
             <div class="num">00 / FRAMEWORK</div>
             <div>
-              <h2>How to use the tracker</h2>
+              <h2>How to use the playbook</h2>
               <p class="intro">Each section lists what to track, threshold levels that matter, and how each segment transmits to others. The final section maps complete cause-effect chains. India-specific overlays are marked [IN].</p>
             </div>
           </div>
@@ -671,6 +688,7 @@ footer{background:#172534;color:white;padding:40px 0 24px}
               <span>• DXY transmits global conditions.</span>
               <span>• Copper/Gold leads the 10Y.</span>
               <span>• Oil transmits inflation into India.</span>
+               <span>• Yen strength can transmit global carry unwinds.</span>
             </div>
           </div>
         </div>
@@ -697,7 +715,7 @@ footer{background:#172534;color:white;padding:40px 0 24px}
                 <tbody>
                   <tr><td>US 2Y Treasury Yield</td><td>Most policy-sensitive rate; moves with Fed Funds expectations</td></tr>
                   <tr><td>US 10Y Treasury Yield</td><td>Global equity discount rate; P/E benchmark for all risky assets</td></tr>
-                  <tr><td>US 10Y TIPS Real Yield</td><td>Most important number in the tracker — primary gold driver</td></tr>
+                  <tr><td>US 10Y TIPS Real Yield</td><td>Most important number in the playbook — primary gold driver</td></tr>
                   <tr><td>2Y–10Y Yield Curve</td><td>Inversion = recession signal (Estrella-Mishkin model)</td></tr>
                   <tr><td>3M–10Y Yield Curve</td><td>Best historical recession predictor; watch &lt;0 bp threshold</td></tr>
                   <tr><td>Fed Funds Futures (CME)</td><td>Implied rate path 6–12M forward; market's bet on the Fed</td></tr>
@@ -772,6 +790,11 @@ footer{background:#172534;color:white;padding:40px 0 24px}
                   <tr><td>MSCI EM FX Index</td><td>EM currencies basket; broad EM health gauge</td></tr>
                 </tbody>
               </table>
+            </div>
+            <div class="callout blue yen-callout"><b>THE YEN — GLOBAL CARRY GAUGE</b><br>USD/JPY is more than a currency pair. A rapidly strengthening JPY can tighten the economics of global carry trades and force leveraged positions to unwind. Watch USD/JPY alongside VIX, credit spreads and EM FX when risk sentiment changes.</div>
+            <div class="flowbox yen-flow">
+              <div class="flow-title">Yen transmission channel</div>
+              <div class="flowline"><span>JPY ↑</span><i>→</i><span>Carry economics weaken</span><i>→</i><span>Leveraged positions unwind</span><i>→</i><span>VIX / Credit ↑</span><i>→</i><span>EM / India risk</span></div>
             </div>
             <h3>India-specific instruments [IN]</h3>
             <div class="table-wrap">
@@ -1135,65 +1158,51 @@ footer{background:#172534;color:white;padding:40px 0 24px}
       <section class="section alt" id="seg8" data-chapter-id="8">
         <div class="chapter-action-row">
           <button class="chapter-complete-btn" onclick="toggleChapter(8, event)" id="chap-btn-8">Mark Chapter Complete</button>
-          <span style="font:11px 'IBM Plex Mono'; color:var(--mut);">Chapter 08 · Oil & Commodities</span>
+          <span style="font:11px 'IBM Plex Mono'; color:var(--mut);">Chapter 08 · Commodities</span>
         </div>
         <div class="wrap">
           <div class="section-head">
-            <div class="num">08 / THE INFLATION ENGINE</div>
+            <div class="num">08 / THE REAL ECONOMY</div>
             <div>
-              <h2>Oil &amp; Commodities</h2>
-              <p class="intro">The Inflation Engine. Energy and base metals transmit global growth and inflation into India.</p>
+              <h2>Commodities</h2>
+              <p class="intro">The Real Economy. Energy, industrial metals and agriculture reveal inflation, manufacturing demand, supply shocks and the forces eventually transmitted into India.</p>
             </div>
           </div>
           <div class="chapter-content">
-            <h3>Energy</h3>
+            <div class="commodity-map">
+              <div class="commodity-card energy"><span class="commodity-kicker">01 · ENERGY</span><h3>Inflation Engine</h3><p>Energy prices feed directly into transport, production, inflation expectations and India's external balance.</p><div class="commodity-tags"><span>Brent</span><span>WTI</span><span>Henry Hub</span><span>TTF</span><span>Crack Spreads</span></div></div>
+              <div class="commodity-card metals"><span class="commodity-kicker">02 · INDUSTRIAL METALS</span><h3>Growth Pulse</h3><p>Metals translate manufacturing, construction, infrastructure and China demand into a market signal.</p><div class="commodity-tags"><span>Copper</span><span>Aluminium</span><span>Zinc</span><span>Iron Ore</span><span>Nickel</span></div></div>
+              <div class="commodity-card agro"><span class="commodity-kicker">03 · AGRICULTURE</span><h3>Food &amp; Supply Cycle</h3><p>Agricultural commodities connect weather, harvests, food inflation, rural purchasing power and Indian policy.</p><div class="commodity-tags"><span>Wheat</span><span>Corn</span><span>Soybeans</span><span>Sugar</span><span>Cotton</span><span>Coffee</span></div></div>
+            </div>
+
+            <h3>Core instruments</h3>
             <div class="table-wrap">
               <table>
-                <thead><tr><th>Instrument</th><th>Why It Matters</th></tr></thead>
+                <thead><tr><th>Complex</th><th>Instrument</th><th>Why It Matters</th></tr></thead>
                 <tbody>
-                  <tr><td>WTI Crude (NYMEX)</td><td>US benchmark; shale economics reference</td></tr>
-                  <tr><td>Brent Crude (ICE)</td><td>Global benchmark; India import reference</td></tr>
-                  <tr><td>WTI–Brent Spread</td><td>Supply/infrastructure signal; normally $2–5</td></tr>
-                  <tr><td>Natural Gas Henry Hub</td><td>US domestic; LNG export capacity driver</td></tr>
-                  <tr><td>TTF Natural Gas (ICE)</td><td>European gas benchmark; energy security proxy</td></tr>
-                  <tr><td>Crack Spreads (3-2-1)</td><td>Refining margin health; downstream sector signal</td></tr>
-                  <tr><td>Saudi ARAMCO OSP</td><td>Monthly official selling price; OPEC supply signal</td></tr>
+                  <tr><td>Energy</td><td>Brent Crude (ICE)</td><td>Global benchmark; critical India import and inflation transmission variable</td></tr>
+                  <tr><td>Energy</td><td>WTI Crude (NYMEX)</td><td>US benchmark; shale and supply economics reference</td></tr>
+                  <tr><td>Energy</td><td>Natural Gas / TTF</td><td>Industrial energy cost and European supply-security signal</td></tr>
+                  <tr><td>Metals</td><td>LME Copper 3M</td><td>Global manufacturing and growth barometer; key China demand signal</td></tr>
+                  <tr><td>Metals</td><td>Aluminium / Zinc / Nickel</td><td>Industrial demand, energy intensity and manufacturing-cycle confirmation</td></tr>
+                  <tr><td>Metals</td><td>Iron Ore (SGX)</td><td>China property + infrastructure demand; India metals-cycle read-through</td></tr>
+                  <tr><td>Agriculture</td><td>Wheat / Corn / Soybeans</td><td>Global food supply, weather and inflation expectations</td></tr>
+                  <tr><td>Agriculture</td><td>Sugar / Cotton / Coffee</td><td>Soft-commodity cycle; relevant to Indian exports, rural demand and input costs</td></tr>
+                  <tr><td>India [IN]</td><td>MCX Copper / Crude / Agri contracts</td><td>Local price expression after global commodity move + INR adjustment</td></tr>
                 </tbody>
               </table>
             </div>
-            <h3>Base metals</h3>
-            <div class="table-wrap">
-              <table>
-                <thead><tr><th>Instrument</th><th>Why It Matters</th></tr></thead>
-                <tbody>
-                  <tr><td>LME Copper 3M</td><td>Primary global growth barometer; tracks China PMI</td></tr>
-                  <tr><td>LME Aluminum</td><td>Energy-intensive; electricity cost proxy</td></tr>
-                  <tr><td>LME Zinc</td><td>Galvanizing steel; construction demand</td></tr>
-                  <tr><td>Iron Ore (SGX futures)</td><td>China property + infrastructure demand</td></tr>
-                  <tr><td>MCX Copper</td><td>LME + INR/USD; tracks with 1–2 day lag</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="callout"><b>THE COPPER / GOLD RATIO — LEADING INDICATOR</b><br>Copper/Gold ratio leads US 10Y Treasury yield by 4–8 weeks. Ratio rising → expect bond yields to rise → equity re-rating pressure. Ratio falling → expect bond yields to fall → gold supported; growth equities benefit.</div>
-            <h3>India crude impact transmission [IN]</h3>
-            <div class="callout amber"><b>Every $10/bbl rise in crude</b><br>approximately $14B/year increase in India's import bill.</div>
-            <div class="flowbox">
-              <div class="flow-title">India transmission</div>
-              <div class="flowline">
-                <span>1. Current Account Deficit widens</span>
-                <i>↓</i>
-                <span>2. INR under pressure</span>
-                <i>↓</i>
-                <span>3. Domestic inflation rises</span>
-                <i>↓</i>
-                <span>4. RBI hawkish bias; rate cuts delayed or reversed</span>
-                <i>↓</i>
-                <span>5. G-Sec yields rise</span>
-                <i>↓</i>
-                <span>6. Nifty P/E multiple compresses</span>
+
+            <div class="commodity-transmission">
+              <div class="transmission-head"><span class="eyebrow">THE INDIA TRANSMISSION MAP</span><strong>Commodity → Macro → Sector</strong></div>
+              <div class="transmission-grid">
+                <div><b>ENERGY</b><span>Brent ↑ → Import bill ↑ → INR pressure → CPI ↑ → RBI sensitivity</span></div>
+                <div><b>METALS</b><span>Copper / Iron Ore ↑ → China &amp; global growth signal → Indian metals / capex cycle</span></div>
+                <div><b>AGRO</b><span>Food commodities ↑ → Food inflation ↑ → CPI / RBI → FMCG &amp; rural demand</span></div>
               </div>
             </div>
-            <p><b>Sectors directly hit: OMCs (HPCL, BPCL), Aviation, Paints, Tyres, Specialty Chemicals, Pigments</b></p>
+
+            <div class="callout"><b>THE COMMODITY CROSS-CHECK</b><br>Don't read commodities in isolation. Ask whether the move is being confirmed by the dollar, industrial activity, real yields and credit. A broad commodity rise says something very different from a single supply-shock spike.</div>
           </div>
         </div>
       </section>
@@ -1248,8 +1257,22 @@ footer{background:#172534;color:white;padding:40px 0 24px}
               </div>
             </details>
 
+            <details class="flowbox red">
+              <summary class="flow-title">Chain 3: Yen Carry Unwind (Global Liquidity Shock)</summary>
+              <div class="flow-vertical-list">
+                <div class="flow-step"><span>1</span> USD/JPY falls sharply as JPY strengthens</div>
+                <div class="flow-step"><span>2</span> Carry-trade economics deteriorate</div>
+                <div class="flow-step"><span>3</span> Leveraged positions are reduced or unwound</div>
+                <div class="flow-step"><span>4</span> Global risk assets face selling pressure</div>
+                <div class="flow-step"><span>5</span> VIX and credit spreads rise</div>
+                <div class="flow-step"><span>6</span> EM FX weakens; INR comes under pressure</div>
+                <div class="flow-step"><span>7</span> FII risk appetite deteriorates</div>
+                <div class="flow-step"><span>8</span> India equities become more sensitive to global de-risking</div>
+              </div>
+            </details>
+
             <details class="flowbox">
-              <summary class="flow-title">Chain 3: China PMI Inflection (Growth Recovery Signal)</summary>
+              <summary class="flow-title">Chain 4: China PMI Inflection (Growth Recovery Signal)</summary>
               <div class="flow-vertical-list">
                 <div class="flow-step"><span>1</span> China PMI beats expectations and turns upward</div>
                 <div class="flow-step"><span>2</span> Copper rallies</div>
@@ -1263,7 +1286,7 @@ footer{background:#172534;color:white;padding:40px 0 24px}
             </details>
 
             <details class="flowbox">
-              <summary class="flow-title">Chain 4: Fed Pivot / Rate Cut Cycle (Reflationary Regime)</summary>
+              <summary class="flow-title">Chain 5: Fed Pivot / Rate Cut Cycle (Reflationary Regime)</summary>
               <div class="flow-vertical-list">
                 <div class="flow-step"><span>1</span> Fed signals pivot to rate cuts</div>
                 <div class="flow-step"><span>2</span> Real yields fall</div>
@@ -1280,7 +1303,7 @@ footer{background:#172534;color:white;padding:40px 0 24px}
             </details>
 
             <details class="flowbox">
-              <summary class="flow-title">Chain 5: Oil Shock (India-Specific Transmission)</summary>
+              <summary class="flow-title">Chain 6: Oil Shock (India-Specific Transmission)</summary>
               <div class="flow-vertical-list">
                 <div class="flow-step"><span>1</span> Crude rises sharply due to geopolitical event or OPEC supply cut</div>
                 <div class="flow-step"><span>2</span> India CAD widens by approximately USD 14B per USD 10 rise in Brent</div>
@@ -1340,8 +1363,8 @@ footer{background:#172534;color:white;padding:40px 0 24px}
           <div class="section-head">
             <div class="num">11 / OPERATING LAYER</div>
             <div>
-              <h2>Tracker dashboard</h2>
-              <p class="intro">Daily, weekly and monthly checklist from the reference framework.</p>
+              <h2>Playbook dashboard</h2>
+              <p class="intro">Daily, weekly and monthly checklist from the playbook framework.</p>
             </div>
           </div>
           <div class="chapter-content">
@@ -1351,9 +1374,12 @@ footer{background:#172534;color:white;padding:40px 0 24px}
                 <ul class="checklist">
                   <li><span class="box"></span><span>US 10Y yield and 10Y TIPS real yield — direction change overnight?</span></li>
                   <li><span class="box"></span><span>DXY level and direction</span></li>
+                  <li><span class="box"></span><span>USD/JPY — direction and speed of JPY strengthening/weakening</span></li>
                   <li><span class="box"></span><span>VIX level and VIX term structure — contango/backwardation</span></li>
                   <li><span class="box"></span><span>CDX High Yield spread — widening or tightening?</span></li>
                   <li><span class="box"></span><span>Brent / WTI crude level</span></li>
+                  <li><span class="box"></span><span>Copper + Iron Ore — industrial-growth confirmation</span></li>
+                  <li><span class="box"></span><span>Key agricultural commodities — food / supply shock check</span></li>
                   <li><span class="box"></span><span>Gold COMEX</span></li>
                   <li><span class="box"></span><span>USD/INR — spot + NDF 1M if diverging</span></li>
                   <li><span class="box"></span><span>SGX Nifty — pre-open India signal</span></li>
@@ -1409,17 +1435,19 @@ footer{background:#172534;color:white;padding:40px 0 24px}
                   <tr><td>CDX High Yield spreads widen 50+ bps</td><td>Equity drawdown likely in 5–10 days</td></tr>
                   <tr><td>MOVE Index spikes &gt;120</td><td>Bond vol leading equity vol; hedge before VIX reacts</td></tr>
                   <tr><td>DXY breaks above 106</td><td>FII India outflow pressure; INR ↓ risk</td></tr>
+                  <tr><td>USD/JPY falls sharply</td><td>Watch carry unwind, VIX, credit and EM FX for a liquidity shock</td></tr>
                   <tr><td>Copper/Gold ratio diverges from 10Y</td><td>Bond market repricing coming; directional trade setup</td></tr>
                   <tr><td>VIX term structure inverts (backwardation)</td><td>Sustained elevated vol; don’t sell premium</td></tr>
                   <tr><td>FII sell + DII sell simultaneously</td><td>No support floor; avoid new longs</td></tr>
                   <tr><td>India VIX &gt;20</td><td>Short option strategies at risk; size down short vega</td></tr>
                   <tr><td>China PMI beats by &gt;1 point</td><td>LME Copper ↑, MCX Metal stocks ↑ next day</td></tr>
                   <tr><td>Brent &gt; $90 + INR &gt;84</td><td>Stagflation risk for India; OMCs, Aviation short</td></tr>
+                  <tr><td>Agri commodities surge broadly</td><td>Food inflation / rural-demand / RBI sensitivity rises</td></tr>
                 </tbody>
               </table>
             </div>
             <div class="rule"></div>
-            <h3>The 10 things to remember</h3>
+            <h3>The 13 things to remember</h3>
             <div class="anchor-grid">
               <div class="anchor"><b>01</b><span>Real yields are the primary gold driver.</span></div>
               <div class="anchor"><b>02</b><span>DXY is the connective tissue.</span></div>
@@ -1427,10 +1455,13 @@ footer{background:#172534;color:white;padding:40px 0 24px}
               <div class="anchor"><b>04</b><span>MOVE can lead VIX.</span></div>
               <div class="anchor"><b>05</b><span>Copper/Gold can lead the 10Y by 4–8 weeks.</span></div>
               <div class="anchor"><b>06</b><span>Oil is India’s inflation / external-balance transmission mechanism.</span></div>
-              <div class="anchor"><b>07</b><span>FII + DII together tell you whether a support floor exists.</span></div>
-              <div class="anchor"><b>08</b><span>Breadth tells you whether an index move is broad or narrow.</span></div>
-              <div class="anchor"><b>09</b><span>India’s INR → inflation → RBI → G-Sec → P/E chain matters.</span></div>
-              <div class="anchor"><b>10</b><span>The strongest signal is cross-asset confirmation, not one indicator.</span></div>
+              <div class="anchor"><b>07</b><span>The Yen is a global carry and liquidity gauge.</span></div>
+              <div class="anchor"><b>08</b><span>Industrial metals reveal the real-economy growth pulse.</span></div>
+              <div class="anchor"><b>09</b><span>Agricultural commodities connect supply shocks to food inflation.</span></div>
+              <div class="anchor"><b>10</b><span>FII + DII together tell you whether a support floor exists.</span></div>
+              <div class="anchor"><b>11</b><span>Breadth tells you whether an index move is broad or narrow.</span></div>
+              <div class="anchor"><b>12</b><span>India’s INR → inflation → RBI → G-Sec → P/E chain matters.</span></div>
+              <div class="anchor"><b>13</b><span>The strongest signal is cross-asset confirmation, not one indicator.</span></div>
             </div>
           </div>
         </div>
@@ -1447,8 +1478,8 @@ footer{background:#172534;color:white;padding:40px 0 24px}
         <h2>Process over prediction.</h2>
       </div>
       <div>
-        <p>The Intermarket Tracker is a structured research framework for reading capital-market transmission across global and Indian assets.</p>
-        <p class="small">Reference Document v1.0 · Intermarket Tracker Framework · India + Global</p>
+        <p>The Intermarket Playbook is a structured research framework for reading capital-market transmission across global and Indian assets.</p>
+        <p class="small">Reference Document v1.1 · Intermarket Playbook Framework · India + Global</p>
       </div>
     </div>
     <div class="foot-bottom">
